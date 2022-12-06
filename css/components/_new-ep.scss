@@ -1,0 +1,72 @@
+.new-ep {
+  background-image: url('../images/5.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4em;
+
+  h1 {
+    margin-top: 2em;
+    text-align: center;
+    font-size: 4.5rem;
+    font-family: 'Noto Serif JP', serif;
+    color: $font-color;
+    text-shadow: 1px 1px 2px #000000;
+    transform: translateY(50px);
+    transition: transform 0.9s ease;
+
+    &.fade-in {
+      transform: translateY(0);
+    }
+  }
+
+  h2 {
+    text-align: center;
+    text-shadow: 1px 1px 2px #000000;
+    color: $font-color;
+    font-size: 2.5rem;
+    transform: translateY(50px);
+    transition: transform 0.9s ease;
+
+    &.fade-in {
+      transform: translateY(0);
+    }
+  }
+
+  .ep-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20em;
+
+    .music-icons-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      transition: opacity 0.5s ease-in-out;
+
+      i {
+        font-size: 2rem;
+        color: $secondary-color;
+        text-shadow: $text-shadow;
+        transition: transform 0.2s ease-in-out;
+
+        &:hover {
+          @include smIconsHover();
+        }
+      }
+    }
+
+    transform: translateY(50px);
+    transition: transform 0.9s ease;
+
+    &.fade-in {
+      transform: translateY(0);
+    }
+  }
+}

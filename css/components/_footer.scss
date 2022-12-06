@@ -1,0 +1,38 @@
+footer {
+  background: $primary-color;
+  font-weight: bold;
+  margin-top: auto;
+  height: fit-content;
+  padding: 1em;
+  width: 100%;
+
+  .footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    padding: 1.5em;
+
+    span {
+      color: $font-color;
+      text-shadow: $text-shadow;
+    }
+
+    .sm-wrapper {
+      display: flex;
+      gap: 2em;
+
+      i {
+        color: $font-color;
+        font-size: 1.5rem;
+        transition: transform 0.2s ease-in-out;
+        text-shadow: $text-shadow;
+
+        &:hover {
+          @include smIconsHover();
+        }
+      }
+    }
+  }
+}

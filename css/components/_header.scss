@@ -1,0 +1,73 @@
+header {
+  background-color: transparent;
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  transition: top 0.6s ease;
+
+  /* Scroll Down */
+  &.hide {
+    top: -200px;
+  }
+
+  .header-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+    }
+
+    nav {
+      .main-navigation {
+        display: flex;
+
+        li {
+          list-style-type: none;
+          font-weight: bold;
+
+          a {
+            text-decoration: none;
+            transition: color 0.2s ease;
+            color: $font-color;
+
+            &.active {
+              text-decoration: underline;
+              text-underline-offset: 15px;
+              text-decoration-thickness: 3px;
+            }
+
+            &:hover {
+              color: lightgray;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sm-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i {
+      color: white;
+      transition: transform 0.2s ease-in-out;
+      text-shadow: $text-shadow;
+
+      &:hover {
+        @include smIconsHover();
+      }
+    }
+  }
+}

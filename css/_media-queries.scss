@@ -1,0 +1,333 @@
+/* MOBILE */
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 60%;
+
+    @import 'mobile-menu';
+
+    main {
+      .new-ep {
+        h1 {
+          padding: 0 2em;
+        }
+
+        .music-icons-wrapper {
+          gap: 2em;
+        }
+      }
+
+      #music {
+        .music-content-wrapper {
+          gap: 8em;
+
+          .slider-wrapper {
+            gap: 4em;
+
+            .music-slider-container {
+              margin-top: 8em;
+              margin-bottom: 5em;
+            }
+
+            .data-wrapper {
+              width: 90%;
+            }
+          }
+        }
+      }
+
+      #live {
+        a {
+          font-size: 60%;
+        }
+      }
+
+      #connect {
+        padding-bottom: 10em;
+
+        .contact-wrapper {
+          form {
+            min-width: 80%;
+          }
+        }
+      }
+
+      .bio-wrapper {
+        .bio-text {
+          p {
+            font-size: 60%;
+          }
+        }
+      }
+
+      .about-hero {
+        background-position: center center;
+      }
+    }
+
+    footer {
+      .footer-wrapper {
+        .sm-wrapper {
+          a {
+            i {
+              font-size: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 374px) {
+  html {
+    font-size: 60%;
+    header {
+      nav {
+        .main-navigation {
+          li {
+            margin: 0.2em;
+
+            a {
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+
+      .sm-wrapper {
+        gap: 2em;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 413px) {
+  html {
+    font-size: 65%;
+
+    header {
+      nav {
+        .main-navigation {
+          li {
+            a {
+              font-size: 2.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* MOBILE LANDSCAPE */
+@media screen and (min-width: 480px) {
+  html {
+    font-size: 60%;
+
+    header {
+      .sm-wrapper {
+        gap: 3em;
+        a {
+          i {
+            font-size: 70%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 599px) {
+  html {
+    main {
+      #music {
+        .music-content-wrapper {
+          gap: 15em;
+
+          .slider-wrapper {
+            gap: 12em;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) and (orientation: portrait) {
+  html {
+    font-size: 80%;
+
+    header {
+      .sm-wrapper {
+        gap: 4.5em;
+        a {
+          i {
+            font-size: 80%;
+          }
+        }
+      }
+    }
+
+    main {
+      #music {
+        .music-content-wrapper {
+          gap: 15em;
+
+          .slider-wrapper {
+            gap: 10em;
+
+            .data-wrapper {
+              width: 70%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* DESKTOP & TABLET LANDSCAPE */
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 80%;
+
+    header {
+      background-color: initial;
+
+      .header-wrapper {
+        gap: 18em;
+        justify-content: space-between;
+
+        .logo-wrapper {
+          display: block;
+          margin-left: 2em;
+          margin-top: 1.5em;
+          width: 20em;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .hamburger {
+          display: none;
+        }
+
+        nav {
+          position: initial;
+          background-color: initial;
+          transform: translateX(0);
+          opacity: 1;
+
+          .main-navigation {
+            gap: 2em;
+            padding: 0;
+            flex-direction: row;
+
+            li {
+              padding: 0;
+
+              a {
+                font-size: 1.3rem;
+                text-shadow: 1px 1px 1px #282828;
+              }
+            }
+          }
+        }
+      }
+
+      .sm-wrapper {
+        gap: 3em;
+
+        a {
+          i {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+
+    main {
+      .new-ep {
+        .music-icons-wrapper {
+          gap: 4em;
+        }
+      }
+
+      #music {
+        .music-content-wrapper {
+          gap: 8em;
+
+          .slider-wrapper {
+            gap: 6em;
+
+            .data-wrapper {
+              width: 70%;
+            }
+          }
+        }
+      }
+
+      #live {
+        a {
+          font-size: 100%;
+        }
+      }
+
+      .about-hero {
+        background-position: initial;
+      }
+    }
+
+    footer {
+      .footer-wrapper {
+        .sm-wrapper {
+          a {
+            i {
+              font-size: initial;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* LARGE SCREENS */
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+// BIGGER SCREENS
+@media screen and (min-width: 1400px) {
+  html {
+    font-size: 100%;
+
+    header {
+      .header-wrapper {
+        gap: 20em;
+
+        nav {
+          .main-navigation {
+            gap: 6em;
+          }
+        }
+      }
+    }
+
+    main {
+      #music {
+        .music-content-wrapper {
+          gap: 12em;
+
+          .slider-wrapper {
+            gap: 12em;
+          }
+        }
+      }
+    }
+  }
+}

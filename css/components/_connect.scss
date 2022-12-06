@@ -1,0 +1,91 @@
+#connect {
+  background-image: url('../images/connect-image.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8em;
+
+  h1 {
+    color: #555555;
+    text-align: center;
+    margin-top: 2em;
+    font-size: 3rem;
+    transform: translateY(50px);
+    transition: transform 0.9s ease;
+
+    &.fade-in {
+      transform: translateY(0);
+    }
+  }
+
+  .contact-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10em;
+    width: 90vw;
+    transform: translateY(50px);
+    transition: transform 0.9s ease;
+
+    &.fade-in {
+      transform: translateY(0);
+    }
+
+    form {
+      padding: 5em;
+      border-radius: 2px;
+      background: rgba(237, 224, 212, 0.85);
+      display: flex;
+      flex-direction: column;
+      gap: 1.5em;
+      width: 60%;
+      box-shadow: 0.5px 0.5px 0.5px #282828;
+
+      ::placeholder {
+        color: #282828;
+      }
+
+      input {
+        background-color: transparent;
+        border-radius: 2px;
+        border: 1px solid #282828;
+        border-top: none;
+        outline: none;
+        font-size: 0.8rem;
+        padding: 1em;
+      }
+
+      textarea {
+        background-color: transparent;
+        outline: none;
+        height: 10em;
+        resize: none;
+        border: 1px solid #282828;
+        border-radius: 2px;
+        padding: 1em;
+        font-size: 0.8rem;
+        border-top: none;
+      }
+
+      .submit-btn {
+        background-color: $secondary-color;
+        border: none;
+        border-radius: 2px;
+        box-shadow: 0 2px 2px -2px #282828;
+        font-weight: bold;
+        height: 4em;
+        text-transform: uppercase;
+        color: $font-color;
+        transition: background-color 0.9s ease;
+
+        &:hover {
+          cursor: pointer;
+          background-color: #3ec13e;
+        }
+      }
+    }
+  }
+}
