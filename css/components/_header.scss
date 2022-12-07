@@ -1,21 +1,20 @@
 header {
-  background-color: transparent;
   width: 100vw;
   height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1em;
   position: fixed;
+  padding: 1em;
   top: 0;
-  left: 0;
   z-index: 20;
-  transition: top 0.6s ease;
+  background-color: transparent;
+  transition: background-color 0.9s ease;
 
-  /* Scroll Down */
-  &.hide {
-    top: -200px;
+  /* Scroll down fade in */
+  &.fade {
+    background-color: rgba(230, 204, 178, 0.98);
   }
 
   .header-wrapper {

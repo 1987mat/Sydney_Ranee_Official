@@ -1,42 +1,58 @@
 class HeaderScroll {
   constructor() {
+    this.aboutWrapper = document.querySelector('.about-wrapper');
     this.header = document.querySelector('header');
-    this.hasScrolled;
-    this.lastScrollTop = 0;
-    this.navbarHeight = this.header.getBoundingClientRect().height;
+    this.sections = document.querySelectorAll('section');
+    this.currentSection;
+    this.navLinks = document
+      .querySelector('.main-navigation')
+      .querySelectorAll('li');
+
     this.events();
   }
 
   events() {
     window.addEventListener('scroll', () => {
       if (window.innerWidth >= 992) {
-        this.hasScrolled = true;
-
-        // Check condition every 150ms
-        setInterval(() => {
-          if (this.hasScrolled) {
-            this.scroll();
-            this.hasScrolled = false;
-          }
-        }, 150);
+        this.activeNavLinks();
+        this.headerFadeInOut();
       }
     });
   }
 
-  scroll() {
-    let currentScroll = window.pageYOffset;
+  // METHODS
+  headerFadeInOut() {
+    // Header fade in / fade out on all pages
     if (
-      currentScroll > this.lastScrollTop &&
-      currentScroll > this.navbarHeight
+      (this.aboutWrapper && window.scrollY >= this.aboutWrapper.offsetTop) ||
+      this.currentSection === 'music'
     ) {
-      // Scroll down - hide navbar
-      this.header.classList.add('hide');
-    } else {
-      // Scroll up - show navbar
-      this.header.classList.remove('hide');
+      this.header.classList.add('fade');
+    } else if (
+      (this.aboutWrapper && window.scrollY <= this.aboutWrapper.offsetTop) ||
+      this.currentSection === 'home'
+    ) {
+      this.header.classList.remove('fade');
     }
+  }
 
-    this.lastScrollTop = currentScroll;
+  activeNavLinks() {
+    this.sections.forEach((section) => {
+      if (window.scrollY >= section.offsetTop) {
+        this.currentSection = section.getAttribute('id');
+      }
+    });
+
+    this.navLinks.forEach((link, index) => {
+      // Apply active class only on links that point to homepage sections
+      if (index <= 4) {
+        let linkItem = link.firstElementChild;
+        linkItem.classList.remove('active');
+        if (linkItem.classList.contains(this.currentSection)) {
+          linkItem.classList.add('active');
+        }
+      }
+    });
   }
 }
 

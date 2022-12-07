@@ -9,8 +9,8 @@
 }
 
 html {
-  min-width: 100%;
-  min-height: 100%;
+  // min-width: 100%;
+  // min-height: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
 
@@ -26,14 +26,19 @@ html {
     main {
       display: flex;
       flex-direction: column;
+      margin: 0;
+      padding: 0;
+      min-height: calc(100vh - 5em);
+      background-color: $primary-color;
 
       @import './components/hero';
       @import './components/new-ep';
       @import './components/music';
       @import './components/live';
       @import './components/visuals';
-      // @import './components/connect';
+      @import './components/connect';
       @import './components/about';
+      @import './components/404';
     }
 
     @import './components/footer';

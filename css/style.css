@@ -6,8 +6,6 @@
 }
 
 html {
-  min-width: 100%;
-  min-height: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
@@ -19,7 +17,6 @@ html body {
   overflow-x: hidden;
 }
 html body header {
-  background-color: transparent;
   width: 100vw;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -28,16 +25,16 @@ html body header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1em;
   position: fixed;
+  padding: 1em;
   top: 0;
-  left: 0;
   z-index: 20;
-  transition: top 0.6s ease;
-  /* Scroll Down */
+  background-color: transparent;
+  transition: background-color 0.9s ease;
+  /* Scroll down fade in */
 }
-html body header.hide {
-  top: -200px;
+html body header.fade {
+  background-color: rgba(230, 204, 178, 0.98);
 }
 html body header .header-wrapper {
   display: flex;
@@ -84,6 +81,10 @@ html body header .sm-wrapper i:hover {
 html body main {
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
+  min-height: calc(100vh - 5em);
+  background-color: rgb(230, 204, 178);
   /* PHOTOS */
 }
 html body main .hero {
@@ -175,7 +176,7 @@ html body main .new-ep .ep-container.fade-in {
   transform: translateY(0);
 }
 html body main #music {
-  background: linear-gradient(90deg, rgb(230, 204, 178) 0%, rgb(208, 200, 167) 100%);
+  background: rgb(230, 204, 178);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -372,7 +373,7 @@ html body main #live .live-wrapper .dates-wrapper .bit-widget-container .bit-upc
   margin-top: 3em;
 }
 html body main #videos {
-  background: linear-gradient(90deg, rgb(230, 204, 178) 0%, rgb(208, 200, 167) 100%);
+  background: rgb(230, 204, 178);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -437,7 +438,7 @@ html body main #videos .video-slider-wrapper {
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 85vw;
+  width: 70em;
   height: 50em;
   margin-bottom: 5em;
   transform: translateY(50px);
@@ -530,6 +531,93 @@ html body main #videos .video-slider-wrapper:hover .prev,
 html body main #videos .video-slider-wrapper:hover .next {
   opacity: 1;
 }
+html body main #connect {
+  background-image: url("../images/connect-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8em;
+}
+html body main #connect h1 {
+  color: #555555;
+  text-align: center;
+  margin-top: 2em;
+  font-size: 3rem;
+  transform: translateY(50px);
+  transition: transform 0.9s ease;
+}
+html body main #connect h1.fade-in {
+  transform: translateY(0);
+}
+html body main #connect .contact-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10em;
+  width: 90vw;
+  transform: translateY(50px);
+  transition: transform 0.9s ease;
+}
+html body main #connect .contact-wrapper.fade-in {
+  transform: translateY(0);
+}
+html body main #connect .contact-wrapper form {
+  padding: 5em;
+  border-radius: 2px;
+  background: rgba(237, 224, 212, 0.85);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  width: 60%;
+  box-shadow: 0.5px 0.5px 0.5px #282828;
+}
+html body main #connect .contact-wrapper form ::-moz-placeholder {
+  color: #282828;
+}
+html body main #connect .contact-wrapper form :-ms-input-placeholder {
+  color: #282828;
+}
+html body main #connect .contact-wrapper form ::placeholder {
+  color: #282828;
+}
+html body main #connect .contact-wrapper form input {
+  background-color: transparent;
+  border-radius: 2px;
+  border: 1px solid #282828;
+  border-top: none;
+  outline: none;
+  font-size: 0.8rem;
+  padding: 1em;
+}
+html body main #connect .contact-wrapper form textarea {
+  background-color: transparent;
+  outline: none;
+  height: 10em;
+  resize: none;
+  border: 1px solid #282828;
+  border-radius: 2px;
+  padding: 1em;
+  font-size: 0.8rem;
+  border-top: none;
+}
+html body main #connect .contact-wrapper form .submit-btn {
+  background-color: #b2e6b2;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0 2px 2px -2px #282828;
+  font-weight: bold;
+  height: 4em;
+  text-transform: uppercase;
+  color: #ffffff;
+  transition: background-color 0.9s ease;
+}
+html body main #connect .contact-wrapper form .submit-btn:hover {
+  cursor: pointer;
+  background-color: #3ec13e;
+}
 html body main .about-hero {
   background-image: url(../images/15.jpg);
   background-size: cover;
@@ -592,7 +680,7 @@ html body main .about-wrapper .bio-wrapper .bio-text p {
   padding: 1em;
 }
 html body main .photos {
-  background: linear-gradient(90deg, rgb(230, 204, 178) 0%, rgb(208, 200, 167) 100%);
+  background: rgb(230, 204, 178);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -613,14 +701,47 @@ html body main .photos div img {
   height: 100%;
   border-radius: 2px;
 }
-html body footer {
-  background: linear-gradient(90deg, rgb(230, 204, 178) 0%, rgb(208, 200, 167) 100%);
-  font-weight: bold;
-  margin-top: auto;
+html body main .content-area {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(230, 204, 178);
+}
+html body main .content-area #content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 3em;
+  margin-top: 15em;
+  margin-bottom: 20em;
+  padding: 0 2em;
+}
+html body main .content-area #content .page-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+html body main .content-area #content .page-content h2 {
+  font-size: 3rem;
+  text-align: center;
+  color: #282828;
+}
+html body main .content-area #content .page-content a {
+  color: #282828;
+}
+html body main .content-area #content img {
+  width: 55%;
+}
+html body footer {
+  background: rgb(230, 204, 178);
+  font-weight: bold;
+  height: 8em;
   width: 100%;
 }
 html body footer .footer-wrapper {
@@ -721,7 +842,7 @@ html body footer .footer-wrapper .sm-wrapper i:hover {
     rotate: -45deg;
   }
   html header .header-wrapper nav {
-    background-color: #e6ccb2;
+    background-color: rgb(230, 204, 178);
     position: fixed;
     top: 0;
     left: 0;
@@ -874,6 +995,12 @@ html body footer .footer-wrapper .sm-wrapper i:hover {
   html {
     font-size: 80%;
   }
+  html header nav .main-navigation li {
+    margin: 0.4em;
+  }
+  html header nav .main-navigation li a {
+    font-size: 3rem;
+  }
   html header .sm-wrapper {
     gap: 4.5em;
   }
@@ -890,6 +1017,15 @@ html body footer .footer-wrapper .sm-wrapper i:hover {
     width: 70%;
   }
 }
+/* IPAD PRO 10.5" */
+@media screen and (min-width: 834px) and (orientation: portrait) {
+  html {
+    font-size: 85%;
+  }
+  html header nav .main-navigation {
+    padding: 3em;
+  }
+}
 /* DESKTOP & TABLET LANDSCAPE */
 @media screen and (min-width: 992px) {
   html {
@@ -899,13 +1035,13 @@ html body footer .footer-wrapper .sm-wrapper i:hover {
     background-color: initial;
   }
   html header .header-wrapper {
-    gap: 18em;
+    gap: 15em;
     justify-content: space-between;
   }
   html header .header-wrapper .logo-wrapper {
     display: block;
     margin-left: 2em;
-    margin-top: 1.5em;
+    margin-top: 0.5em;
     width: 20em;
   }
   html header .header-wrapper .logo-wrapper img {
@@ -960,12 +1096,19 @@ html body footer .footer-wrapper .sm-wrapper i:hover {
     font-size: initial;
   }
 }
+/* IPAD PRO 12.5" */
+@media screen and (min-width: 1024px) and (orientation: portrait) {
+  html header .header-wrapper {
+    gap: 12em;
+  }
+}
 /* LARGE SCREENS */
 @media screen and (min-width: 1200px) {
   html {
     font-size: 100%;
   }
 }
+/* BIGGER SCREENS */
 @media screen and (min-width: 1400px) {
   html {
     font-size: 100%;
@@ -981,5 +1124,27 @@ html body footer .footer-wrapper .sm-wrapper i:hover {
   }
   html main #music .music-content-wrapper .slider-wrapper {
     gap: 12em;
+  }
+}
+@media screen and (min-width: 2075px) {
+  html header .header-wrapper {
+    gap: 40em;
+  }
+  html header .header-wrapper nav .main-navigation {
+    gap: 6em;
+  }
+}
+@media screen and (min-width: 2559px) {
+  html header {
+    gap: 4em;
+  }
+  html header .header-wrapper {
+    gap: 70em;
+  }
+  html header .header-wrapper nav .main-navigation {
+    gap: 6em;
+  }
+  html main #music .music-content-wrapper .slider-wrapper {
+    gap: 20em;
   }
 }/*# sourceMappingURL=style.css.map */

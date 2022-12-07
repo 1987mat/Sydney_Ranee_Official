@@ -165,7 +165,7 @@
   </section>
 
   <!-- CONTACT FORM -->
-  <!-- <section id="connect">
+  <section id="connect">
     <h1 data-observe>GET IN TOUCH</h1>
     <div data-observe class="contact-wrapper">
       <form>
@@ -176,7 +176,7 @@
         <input type="submit" class="submit-btn">
       </form>
     </div>
-  </section> -->
+  </section> 
 </main>
 
 <?php 

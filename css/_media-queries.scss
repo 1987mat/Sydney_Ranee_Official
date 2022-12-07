@@ -127,6 +127,7 @@
     header {
       .sm-wrapper {
         gap: 3em;
+
         a {
           i {
             font-size: 70%;
@@ -159,8 +160,20 @@
     font-size: 80%;
 
     header {
+      nav {
+        .main-navigation {
+          li {
+            margin: 0.4em;
+            a {
+              font-size: 3rem;
+            }
+          }
+        }
+      }
+
       .sm-wrapper {
         gap: 4.5em;
+
         a {
           i {
             font-size: 80%;
@@ -187,6 +200,20 @@
   }
 }
 
+/* IPAD PRO 10.5" */
+@media screen and (min-width: 834px) and (orientation: portrait) {
+  html {
+    font-size: 85%;
+    header {
+      nav {
+        .main-navigation {
+          padding: 3em;
+        }
+      }
+    }
+  }
+}
+
 /* DESKTOP & TABLET LANDSCAPE */
 @media screen and (min-width: 992px) {
   html {
@@ -196,13 +223,13 @@
       background-color: initial;
 
       .header-wrapper {
-        gap: 18em;
+        gap: 15em;
         justify-content: space-between;
 
         .logo-wrapper {
           display: block;
           margin-left: 2em;
-          margin-top: 1.5em;
+          margin-top: 0.5em;
           width: 20em;
 
           img {
@@ -294,6 +321,17 @@
   }
 }
 
+/* IPAD PRO 12.5" */
+@media screen and (min-width: 1024px) and (orientation: portrait) {
+  html {
+    header {
+      .header-wrapper {
+        gap: 12em;
+      }
+    }
+  }
+}
+
 /* LARGE SCREENS */
 @media screen and (min-width: 1200px) {
   html {
@@ -301,7 +339,7 @@
   }
 }
 
-// BIGGER SCREENS
+/* BIGGER SCREENS */
 @media screen and (min-width: 1400px) {
   html {
     font-size: 100%;
@@ -325,6 +363,50 @@
 
           .slider-wrapper {
             gap: 12em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 2075px) {
+  html {
+    header {
+      .header-wrapper {
+        gap: 40em;
+
+        nav {
+          .main-navigation {
+            gap: 6em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 2559px) {
+  html {
+    header {
+      gap: 4em;
+
+      .header-wrapper {
+        gap: 70em;
+
+        nav {
+          .main-navigation {
+            gap: 6em;
+          }
+        }
+      }
+    }
+
+    main {
+      #music {
+        .music-content-wrapper {
+          .slider-wrapper {
+            gap: 20em;
           }
         }
       }

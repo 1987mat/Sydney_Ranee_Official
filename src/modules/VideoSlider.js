@@ -14,28 +14,24 @@ class VideoSlider {
         button.disabled = true;
         const offset = button.dataset.carouselBtn === 'next' ? 1 : -1;
         const activeSlide = this.sliderContainer.querySelector('[data-active]');
-
-        let newIndex =
-          [...this.sliderContainer.children].indexOf(activeSlide) + offset;
+        const videoSlideArr = [...this.sliderContainer.children];
+        let newIndex = videoSlideArr.indexOf(activeSlide) + offset;
 
         if (newIndex < 0) {
-          newIndex = this.sliderContainer.children.length - 1;
+          newIndex = videoSlideArr.length - 1;
         }
 
-        if (newIndex > this.sliderContainer.children.length - 1) {
+        if (newIndex > videoSlideArr.length - 1) {
           newIndex = 0;
         }
 
-        this.sliderContainer.children[newIndex].dataset.active = true;
+        videoSlideArr[newIndex].dataset.active = true;
         delete activeSlide.dataset.active;
 
         // Enable carousel arrows if the animation is done
-        this.sliderContainer.children[newIndex].addEventListener(
-          'transitionend',
-          () => {
-            button.disabled = false;
-          }
-        );
+        videoSlideArr[newIndex].addEventListener('transitionend', () => {
+          button.disabled = false;
+        });
       });
     });
   }

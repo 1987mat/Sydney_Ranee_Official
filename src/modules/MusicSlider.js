@@ -55,11 +55,10 @@ class MusicSlider {
         let activeSlide = this.sliderContainer.querySelector('[data-active]');
         const prevBtn = document.querySelector('.prev-btn');
         const nextBtn = document.querySelector('.next-btn');
+        const slideArr = [...this.sliderContainer.children];
 
-        if (
-          offset === -1 &&
-          [...this.sliderContainer.children].indexOf(activeSlide) === 1
-        ) {
+        // Disable prev button on first slide
+        if (offset === -1 && slideArr.indexOf(activeSlide) === 1) {
           prevBtn.style.opacity = '0.5';
           prevBtn.style.pointerEvents = 'none';
         } else {
@@ -67,9 +66,10 @@ class MusicSlider {
           prevBtn.style.pointerEvents = 'auto';
         }
 
+        // Disable next button on last slide
         if (
           offset === 1 &&
-          [...this.sliderContainer.children].indexOf(activeSlide) === 5
+          slideArr.indexOf(activeSlide) === slideArr.length - 2
         ) {
           nextBtn.style.opacity = '0.5';
           nextBtn.style.pointerEvents = 'none';
@@ -78,18 +78,19 @@ class MusicSlider {
           nextBtn.style.pointerEvents = 'auto';
         }
 
-        let newActiveIndex =
-          [...this.sliderContainer.children].indexOf(activeSlide) + offset;
+        // Slide logic
+        let newActiveIndex = slideArr.indexOf(activeSlide) + offset;
 
         if (newActiveIndex < 0) {
-          newActiveIndex = this.sliderContainer.children.length - 1;
+          newActiveIndex = slideArr.length - 1;
         }
 
-        if (newActiveIndex > this.sliderContainer.children.length - 1) {
+        if (newActiveIndex > slideArr.length - 1) {
           newActiveIndex = 0;
         }
 
-        let newActiveSlide = this.sliderContainer.children[newActiveIndex];
+        // Update DOM
+        let newActiveSlide = slideArr[newActiveIndex];
         let newActiveSlideObj = this.epArray[newActiveIndex];
         this.epTitle.innerText = newActiveSlideObj.title;
         this.epLink.href = newActiveSlideObj.link;
@@ -97,12 +98,9 @@ class MusicSlider {
         delete activeSlide.dataset.active;
 
         // Prevent too many clicks and wait end of transition
-        this.sliderContainer.children[newActiveIndex].addEventListener(
-          'transitionend',
-          () => {
-            button.disabled = false;
-          }
-        );
+        slideArr[newActiveIndex].addEventListener('transitionend', () => {
+          button.disabled = false;
+        });
       });
     });
   }

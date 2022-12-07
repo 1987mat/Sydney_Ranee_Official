@@ -2,54 +2,6 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/modules/ActiveNavLinks.js":
-/*!***************************************!*\
-  !*** ./src/modules/ActiveNavLinks.js ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-class ActiveNavLinks {
-  constructor() {
-    this.sections = document.querySelectorAll('section');
-    this.navLinks = document.querySelector('.main-navigation').querySelectorAll('li');
-    this.events();
-  }
-
-  events() {
-    window.addEventListener('scroll', () => {
-      let currentSection;
-
-      if (window.innerWidth >= 992) {
-        this.sections.forEach(section => {
-          if (window.scrollY >= section.offsetTop) {
-            currentSection = section.getAttribute('id');
-          }
-        });
-        this.navLinks.forEach((link, index) => {
-          // Apply active class only on links that point to sections in homepage
-          if (index <= 4) {
-            let linkItem = link.firstElementChild;
-            linkItem.classList.remove('active');
-
-            if (linkItem.classList.contains(currentSection)) {
-              linkItem.classList.add('active');
-            }
-          }
-        });
-      }
-    });
-  }
-
-}
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ActiveNavLinks);
-
-/***/ }),
-
 /***/ "./src/modules/HeaderScroll.js":
 /*!*************************************!*\
   !*** ./src/modules/HeaderScroll.js ***!
@@ -62,40 +14,50 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 class HeaderScroll {
   constructor() {
+    this.aboutWrapper = document.querySelector('.about-wrapper');
     this.header = document.querySelector('header');
-    this.hasScrolled;
-    this.lastScrollTop = 0;
-    this.navbarHeight = this.header.getBoundingClientRect().height;
+    this.sections = document.querySelectorAll('section');
+    this.currentSection;
+    this.navLinks = document.querySelector('.main-navigation').querySelectorAll('li');
     this.events();
   }
 
   events() {
     window.addEventListener('scroll', () => {
       if (window.innerWidth >= 992) {
-        this.hasScrolled = true; // Check condition every 150ms
-
-        setInterval(() => {
-          if (this.hasScrolled) {
-            this.scroll();
-            this.hasScrolled = false;
-          }
-        }, 150);
+        this.activeNavLinks();
+        this.headerFadeInOut();
       }
     });
+  } // METHODS
+
+
+  headerFadeInOut() {
+    // Header fade in / fade out on all pages
+    if (this.aboutWrapper && window.scrollY >= this.aboutWrapper.offsetTop || this.currentSection === 'music') {
+      this.header.classList.add('fade');
+    } else if (this.aboutWrapper && window.scrollY <= this.aboutWrapper.offsetTop || this.currentSection === 'home') {
+      this.header.classList.remove('fade');
+    }
   }
 
-  scroll() {
-    let currentScroll = window.pageYOffset;
+  activeNavLinks() {
+    this.sections.forEach(section => {
+      if (window.scrollY >= section.offsetTop) {
+        this.currentSection = section.getAttribute('id');
+      }
+    });
+    this.navLinks.forEach((link, index) => {
+      // Apply active class only on links that point to homepage sections
+      if (index <= 4) {
+        let linkItem = link.firstElementChild;
+        linkItem.classList.remove('active');
 
-    if (currentScroll > this.lastScrollTop && currentScroll > this.navbarHeight) {
-      // Scroll down - hide navbar
-      this.header.classList.add('hide');
-    } else {
-      // Scroll up - show navbar
-      this.header.classList.remove('hide');
-    }
-
-    this.lastScrollTop = currentScroll;
+        if (linkItem.classList.contains(this.currentSection)) {
+          linkItem.classList.add('active');
+        }
+      }
+    });
   }
 
 }
@@ -203,41 +165,45 @@ class MusicSlider {
         let activeSlide = this.sliderContainer.querySelector('[data-active]');
         const prevBtn = document.querySelector('.prev-btn');
         const nextBtn = document.querySelector('.next-btn');
+        const slideArr = [...this.sliderContainer.children]; // Disable prev button on first slide
 
-        if (offset === -1 && [...this.sliderContainer.children].indexOf(activeSlide) === 1) {
+        if (offset === -1 && slideArr.indexOf(activeSlide) === 1) {
           prevBtn.style.opacity = '0.5';
           prevBtn.style.pointerEvents = 'none';
         } else {
           prevBtn.style.opacity = '1';
           prevBtn.style.pointerEvents = 'auto';
-        }
+        } // Disable next button on last slide
 
-        if (offset === 1 && [...this.sliderContainer.children].indexOf(activeSlide) === 5) {
+
+        if (offset === 1 && slideArr.indexOf(activeSlide) === slideArr.length - 2) {
           nextBtn.style.opacity = '0.5';
           nextBtn.style.pointerEvents = 'none';
         } else {
           nextBtn.style.opacity = '1';
           nextBtn.style.pointerEvents = 'auto';
-        }
+        } // Slide logic
 
-        let newActiveIndex = [...this.sliderContainer.children].indexOf(activeSlide) + offset;
+
+        let newActiveIndex = slideArr.indexOf(activeSlide) + offset;
 
         if (newActiveIndex < 0) {
-          newActiveIndex = this.sliderContainer.children.length - 1;
+          newActiveIndex = slideArr.length - 1;
         }
 
-        if (newActiveIndex > this.sliderContainer.children.length - 1) {
+        if (newActiveIndex > slideArr.length - 1) {
           newActiveIndex = 0;
-        }
+        } // Update DOM
 
-        let newActiveSlide = this.sliderContainer.children[newActiveIndex];
+
+        let newActiveSlide = slideArr[newActiveIndex];
         let newActiveSlideObj = this.epArray[newActiveIndex];
         this.epTitle.innerText = newActiveSlideObj.title;
         this.epLink.href = newActiveSlideObj.link;
         newActiveSlide.dataset.active = true;
         delete activeSlide.dataset.active; // Prevent too many clicks and wait end of transition
 
-        this.sliderContainer.children[newActiveIndex].addEventListener('transitionend', () => {
+        slideArr[newActiveIndex].addEventListener('transitionend', () => {
           button.disabled = false;
         });
       });
@@ -347,20 +313,21 @@ class VideoSlider {
         button.disabled = true;
         const offset = button.dataset.carouselBtn === 'next' ? 1 : -1;
         const activeSlide = this.sliderContainer.querySelector('[data-active]');
-        let newIndex = [...this.sliderContainer.children].indexOf(activeSlide) + offset;
+        const videoSlideArr = [...this.sliderContainer.children];
+        let newIndex = videoSlideArr.indexOf(activeSlide) + offset;
 
         if (newIndex < 0) {
-          newIndex = this.sliderContainer.children.length - 1;
+          newIndex = videoSlideArr.length - 1;
         }
 
-        if (newIndex > this.sliderContainer.children.length - 1) {
+        if (newIndex > videoSlideArr.length - 1) {
           newIndex = 0;
         }
 
-        this.sliderContainer.children[newIndex].dataset.active = true;
+        videoSlideArr[newIndex].dataset.active = true;
         delete activeSlide.dataset.active; // Enable carousel arrows if the animation is done
 
-        this.sliderContainer.children[newIndex].addEventListener('transitionend', () => {
+        videoSlideArr[newIndex].addEventListener('transitionend', () => {
           button.disabled = false;
         });
       });
@@ -464,25 +431,22 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_animationOnScroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/animationOnScroll */ "./src/modules/animationOnScroll.js");
-/* harmony import */ var _modules_HeaderScroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/HeaderScroll */ "./src/modules/HeaderScroll.js");
-/* harmony import */ var _modules_MusicSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/MusicSlider */ "./src/modules/MusicSlider.js");
-/* harmony import */ var _modules_VideoSlider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/VideoSlider */ "./src/modules/VideoSlider.js");
-/* harmony import */ var _modules_VideoModal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/VideoModal */ "./src/modules/VideoModal.js");
-/* harmony import */ var _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/MobileMenu */ "./src/modules/MobileMenu.js");
-/* harmony import */ var _modules_ActiveNavLinks__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/ActiveNavLinks */ "./src/modules/ActiveNavLinks.js");
+/* harmony import */ var _modules_MusicSlider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/MusicSlider */ "./src/modules/MusicSlider.js");
+/* harmony import */ var _modules_VideoSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/VideoSlider */ "./src/modules/VideoSlider.js");
+/* harmony import */ var _modules_VideoModal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/VideoModal */ "./src/modules/VideoModal.js");
+/* harmony import */ var _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/MobileMenu */ "./src/modules/MobileMenu.js");
+/* harmony import */ var _modules_HeaderScroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/HeaderScroll */ "./src/modules/HeaderScroll.js");
 
 
 
 
 
 
-
-const headerScroll = new _modules_HeaderScroll__WEBPACK_IMPORTED_MODULE_1__["default"]();
-const slider = new _modules_MusicSlider__WEBPACK_IMPORTED_MODULE_2__["default"]();
-const videoSlider = new _modules_VideoSlider__WEBPACK_IMPORTED_MODULE_3__["default"]();
-const videoModal = new _modules_VideoModal__WEBPACK_IMPORTED_MODULE_4__["default"]();
-const mobileMenu = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_5__["default"]();
-const activeLinks = new _modules_ActiveNavLinks__WEBPACK_IMPORTED_MODULE_6__["default"]();
+const slider = new _modules_MusicSlider__WEBPACK_IMPORTED_MODULE_1__["default"]();
+const videoSlider = new _modules_VideoSlider__WEBPACK_IMPORTED_MODULE_2__["default"]();
+const videoModal = new _modules_VideoModal__WEBPACK_IMPORTED_MODULE_3__["default"]();
+const mobileMenu = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_4__["default"]();
+const headerScroll = new _modules_HeaderScroll__WEBPACK_IMPORTED_MODULE_5__["default"]();
 (0,_modules_animationOnScroll__WEBPACK_IMPORTED_MODULE_0__.animationOnScroll)();
 })();
 
