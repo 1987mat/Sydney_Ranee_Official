@@ -4,6 +4,8 @@ class HeaderScroll {
     this.header = document.querySelector('header');
     this.sections = document.querySelectorAll('section');
     this.currentSection;
+    this.previousScroll;
+    this.navbarHeight = this.header.getBoundingClientRect().height;
     this.navLinks = document
       .querySelector('.main-navigation')
       .querySelectorAll('li');
@@ -16,6 +18,7 @@ class HeaderScroll {
       if (window.innerWidth >= 992) {
         this.activeNavLinks();
         this.headerFadeInOut();
+        this.hideHeader();
       }
     });
   }
@@ -53,6 +56,17 @@ class HeaderScroll {
         }
       }
     });
+  }
+
+  hideHeader() {
+    let currentScroll = scrollY;
+    if (currentScroll < this.previousScroll) {
+      this.header.classList.add('hide');
+    } else {
+      this.header.classList.remove('hide');
+    }
+
+    this.previousScroll = currentScroll;
   }
 }
 

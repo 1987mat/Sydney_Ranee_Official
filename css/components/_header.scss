@@ -11,10 +11,16 @@ header {
   z-index: 20;
   background-color: transparent;
   transition: background-color 0.9s ease;
+  transition: top 0.9s ease;
 
   /* Scroll down fade in */
   &.fade {
     background-color: rgba(230, 204, 178, 0.98);
+  }
+
+  /* Scroll down hide */
+  &.hide {
+    top: -200px;
   }
 
   .header-wrapper {

@@ -25,7 +25,7 @@
           <li><a class="videos" href="<?php echo site_url('')."#videos"; ?>">Visuals</a></li>
           <li><a class="connect" href="<?php echo site_url('')."#connect"; ?>">Connect</a></li>
           <li><a <?php if(is_page('about')) echo 'class="about active"'?> href="<?php echo site_url('/about');?>">About</a></li>
-          <li><a href="#" target="_blank">Store</a></li>
+          <li><a href="https://sydneyraneeshop.com" target="_blank">Store</a></li>
         </ul>
       </nav>
     </div>

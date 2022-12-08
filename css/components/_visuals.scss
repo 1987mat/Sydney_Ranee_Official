@@ -8,6 +8,7 @@
 
   h1 {
     margin-top: 2em;
+    margin-bottom: 2em;
     font-size: 3rem;
     color: $font-color;
     transform: translateY(50px);
@@ -72,9 +73,8 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 70em;
     height: 50em;
-    margin-bottom: 5em;
+    margin-bottom: 6em;
     transform: translateY(50px);
     transition: transform 0.9s ease;
 

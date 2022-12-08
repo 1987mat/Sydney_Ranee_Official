@@ -31,10 +31,15 @@ html body header {
   z-index: 20;
   background-color: transparent;
   transition: background-color 0.9s ease;
+  transition: top 0.9s ease;
   /* Scroll down fade in */
+  /* Scroll down hide */
 }
 html body header.fade {
   background-color: rgba(230, 204, 178, 0.98);
+}
+html body header.hide {
+  top: -200px;
 }
 html body header .header-wrapper {
   display: flex;
@@ -91,16 +96,15 @@ html body main .hero {
   background-image: url("../images/3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
+  background-position: center;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 html body main .hero .quote {
-  padding-right: 1em;
+  margin-right: 1.5em;
   width: 35%;
   text-shadow: 0.5px 0.5px 0.5px #000000;
   transform: translateY(20px);
@@ -185,7 +189,7 @@ html body main #music {
 }
 html body main #music h1 {
   color: #ffffff;
-  margin-top: 2em;
+  margin-top: 3em;
   font-size: 3rem;
   transform: translateY(50px);
   transition: transform 0.9s ease;
@@ -199,7 +203,10 @@ html body main #music .music-content-wrapper {
   justify-content: center;
   align-items: center;
   width: 90vw;
-  margin-bottom: 8em;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-bottom: 5em;
   transform: translateY(50px);
   transition: transform 0.9s ease;
 }
@@ -208,78 +215,64 @@ html body main #music .music-content-wrapper.fade-in {
 }
 html body main #music .music-content-wrapper .slider-wrapper {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  width: 100%;
-}
-html body main #music .music-content-wrapper .slider-wrapper .data-wrapper {
+  width: 90%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   position: relative;
 }
-html body main #music .music-content-wrapper .slider-wrapper .data-wrapper .prev-btn {
+html body main #music .music-content-wrapper .slider-wrapper .prev-btn {
   color: black;
   margin-right: auto;
   opacity: 0.5;
   pointer-events: none;
   z-index: 16;
   position: absolute;
-  border: 1px solid red;
   left: 0;
-  bottom: -250%;
   border: none;
   background-color: transparent;
   transition: color 0.4s ease;
 }
-html body main #music .music-content-wrapper .slider-wrapper .data-wrapper .prev-btn:disabled {
+html body main #music .music-content-wrapper .slider-wrapper .prev-btn:disabled {
   color: #282828;
 }
-html body main #music .music-content-wrapper .slider-wrapper .data-wrapper .prev-btn .fa-angle-left {
+html body main #music .music-content-wrapper .slider-wrapper .prev-btn .fa-angle-left {
   font-size: 5rem;
 }
-html body main #music .music-content-wrapper .slider-wrapper .data-wrapper .prev-btn:hover {
+html body main #music .music-content-wrapper .slider-wrapper .prev-btn:hover {
   color: gray;
   cursor: pointer;
 }
-html body main #music .music-content-wrapper .slider-wrapper .data-wrapper .next-btn {
+html body main #music .music-content-wrapper .next-btn {
   color: black;
   opacity: 1;
   border: none;
   z-index: 16;
   position: absolute;
   right: 0;
-  bottom: -250%;
   background-color: transparent;
   transition: color 0.4s ease;
 }
-html body main #music .music-content-wrapper .slider-wrapper .data-wrapper .next-btn:disabled {
+html body main #music .music-content-wrapper .next-btn:disabled {
   color: #282828;
 }
-html body main #music .music-content-wrapper .slider-wrapper .data-wrapper .next-btn .fa-angle-right {
+html body main #music .music-content-wrapper .next-btn .fa-angle-right {
   font-size: 5rem;
 }
-html body main #music .music-content-wrapper .slider-wrapper .data-wrapper .next-btn:hover {
+html body main #music .music-content-wrapper .next-btn:hover {
   color: gray;
   cursor: pointer;
 }
-html body main #music .music-content-wrapper .slider-wrapper .data-wrapper .ep-data {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-  flex-grow: 0;
-}
-html body main #music .music-content-wrapper .slider-wrapper .data-wrapper .ep-data h3 {
-  color: #282828;
-  font-size: 1.8rem;
-  text-align: center;
-}
-html body main #music .music-content-wrapper .slider-wrapper .music-slider-container {
+html body main #music .music-content-wrapper .music-slider-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60vw;
+  width: 50vw;
+  position: relative;
 }
-html body main #music .music-content-wrapper .slider-wrapper .music-slider-container .slide {
+html body main #music .music-content-wrapper .music-slider-container .slide {
   opacity: 0;
   position: absolute;
   width: 100%;
@@ -290,16 +283,24 @@ html body main #music .music-content-wrapper .slider-wrapper .music-slider-conta
   transition: opacity 0.5s ease-in;
   z-index: 15;
 }
-html body main #music .music-content-wrapper .slider-wrapper .music-slider-container .slide img {
-  width: 30%;
+html body main #music .music-content-wrapper .music-slider-container .slide img {
   border-radius: 2px;
   box-shadow: 2px 2px 2px #282828;
 }
-html body main #music .music-content-wrapper .slider-wrapper .music-slider-container .slide[data-active] {
+html body main #music .music-content-wrapper .music-slider-container .slide[data-active] {
   opacity: 1;
   z-index: 10;
 }
-html body main #music .music-content-wrapper .slider-wrapper .spotify-btn {
+html body main #music .music-content-wrapper .ep-data {
+  display: flex;
+  flex-direction: column;
+}
+html body main #music .music-content-wrapper .ep-data h3 {
+  color: #282828;
+  font-size: 1.8rem;
+  text-align: center;
+}
+html body main #music .music-content-wrapper .ep-data .spotify-btn {
   display: flex;
   background-color: #b2e6b2;
   justify-content: center;
@@ -310,21 +311,21 @@ html body main #music .music-content-wrapper .slider-wrapper .spotify-btn {
   box-shadow: 0 3px 2px -2px #282828;
   border-radius: 50px;
   padding: 1em;
-  margin-top: 4em;
   width: 15em;
   transition: background-color 0.4s ease-in-out;
 }
-html body main #music .music-content-wrapper .slider-wrapper .spotify-btn .fa-spotify {
+html body main #music .music-content-wrapper .ep-data .spotify-btn .fa-spotify {
   color: #282828;
 }
-html body main #music .music-content-wrapper .slider-wrapper .spotify-btn span {
+html body main #music .music-content-wrapper .ep-data .spotify-btn span {
   color: #282828;
 }
-html body main #music .music-content-wrapper .slider-wrapper .spotify-btn:hover {
+html body main #music .music-content-wrapper .ep-data .spotify-btn:hover {
   background-color: #3ec13e;
 }
 html body main #music .spotify-wrapper {
-  width: 50vw;
+  width: 70vw;
+  margin-bottom: 5em;
 }
 html body main #music .spotify-wrapper iframe {
   width: 100%;
@@ -382,6 +383,7 @@ html body main #videos {
 }
 html body main #videos h1 {
   margin-top: 2em;
+  margin-bottom: 2em;
   font-size: 3rem;
   color: #ffffff;
   transform: translateY(50px);
@@ -438,9 +440,8 @@ html body main #videos .video-slider-wrapper {
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 70em;
   height: 50em;
-  margin-bottom: 5em;
+  margin-bottom: 6em;
   transform: translateY(50px);
   transition: transform 0.9s ease;
 }
@@ -622,7 +623,6 @@ html body main .about-hero {
   background-image: url(../images/15.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -903,7 +903,7 @@ html body footer .footer-wrapper .sm-wrapper i:hover {
             animation: fadeIn 0.8s ease-in-out forwards;
   }
   html header .sm-wrapper {
-    margin-left: 2em;
+    margin-left: 4em;
     gap: 1.5em;
   }
   html header .sm-wrapper a i {
@@ -916,21 +916,23 @@ html body footer .footer-wrapper .sm-wrapper i:hover {
   html main .new-ep .music-icons-wrapper {
     gap: 2em;
   }
+  html main #music h1 {
+    margin-bottom: 4em;
+  }
   html main #music .music-content-wrapper {
-    gap: 8em;
+    gap: 10em;
   }
-  html main #music .music-content-wrapper .slider-wrapper {
-    gap: 4em;
-  }
-  html main #music .music-content-wrapper .slider-wrapper .music-slider-container {
-    margin-top: 8em;
-    margin-bottom: 5em;
-  }
-  html main #music .music-content-wrapper .slider-wrapper .data-wrapper {
-    width: 90%;
+  html main #music .music-content-wrapper .slider-wrapper .music-slider-container .slide img {
+    width: 80%;
   }
   html main #live a {
     font-size: 60%;
+  }
+  html main #videos h1 {
+    margin-bottom: 0;
+  }
+  html main #videos .video-slider-wrapper {
+    width: 30em;
   }
   html main #connect {
     padding-bottom: 10em;
@@ -961,6 +963,9 @@ html body footer .footer-wrapper .sm-wrapper i:hover {
   html header .sm-wrapper {
     gap: 2em;
   }
+  html main #music h1 {
+    margin-bottom: 5em;
+  }
 }
 @media screen and (min-width: 413px) {
   html {
@@ -981,13 +986,19 @@ html body footer .footer-wrapper .sm-wrapper i:hover {
   html header .sm-wrapper a i {
     font-size: 70%;
   }
+  html main #music h1 {
+    margin-bottom: 6em;
+  }
+  html main #music .music-content-wrapper {
+    gap: 12em;
+  }
+  html main #videos .video-slider-wrapper {
+    width: 40em;
+  }
 }
 @media screen and (min-width: 599px) {
-  html main #music .music-content-wrapper {
-    gap: 15em;
-  }
-  html main #music .music-content-wrapper .slider-wrapper {
-    gap: 12em;
+  html main #videos .video-slider-wrapper {
+    width: 60em;
   }
 }
 /* TABLET */
@@ -1008,13 +1019,18 @@ html body footer .footer-wrapper .sm-wrapper i:hover {
     font-size: 80%;
   }
   html main #music .music-content-wrapper {
-    gap: 15em;
+    gap: 20em;
   }
-  html main #music .music-content-wrapper .slider-wrapper {
-    gap: 10em;
+  html main #videos .video-slider-wrapper {
+    width: 50em;
   }
-  html main #music .music-content-wrapper .slider-wrapper .data-wrapper {
-    width: 70%;
+}
+@media screen and (min-width: 800px) {
+  html main #music h1 {
+    margin-bottom: 8em;
+  }
+  html main #music .music-content-wrapper {
+    gap: 25em;
   }
 }
 /* IPAD PRO 10.5" */
@@ -1077,17 +1093,17 @@ html body footer .footer-wrapper .sm-wrapper i:hover {
   html main .new-ep .music-icons-wrapper {
     gap: 4em;
   }
+  html main #music h1 {
+    margin-bottom: 8em;
+  }
   html main #music .music-content-wrapper {
-    gap: 8em;
-  }
-  html main #music .music-content-wrapper .slider-wrapper {
-    gap: 6em;
-  }
-  html main #music .music-content-wrapper .slider-wrapper .data-wrapper {
-    width: 70%;
+    gap: 20em;
   }
   html main #live a {
     font-size: 100%;
+  }
+  html main #videos .video-slider-wrapper {
+    width: 60em;
   }
   html main .about-hero {
     background-position: initial;
@@ -1107,6 +1123,15 @@ html body footer .footer-wrapper .sm-wrapper i:hover {
   html {
     font-size: 100%;
   }
+  html main #music h1 {
+    margin-bottom: 8em;
+  }
+  html main #music .music-content-wrapper {
+    gap: 20em;
+  }
+  html main #videos .video-slider-wrapper {
+    width: 70em;
+  }
 }
 /* BIGGER SCREENS */
 @media screen and (min-width: 1400px) {
@@ -1119,19 +1144,19 @@ html body footer .footer-wrapper .sm-wrapper i:hover {
   html header .header-wrapper nav .main-navigation {
     gap: 6em;
   }
-  html main #music .music-content-wrapper {
-    gap: 12em;
-  }
-  html main #music .music-content-wrapper .slider-wrapper {
-    gap: 12em;
-  }
 }
-@media screen and (min-width: 2075px) {
+@media screen and (min-width: 2074px) {
   html header .header-wrapper {
     gap: 40em;
   }
   html header .header-wrapper nav .main-navigation {
     gap: 6em;
+  }
+  html main #music h1 {
+    margin-bottom: 10em;
+  }
+  html main #music .music-content-wrapper {
+    gap: 30em;
   }
 }
 @media screen and (min-width: 2559px) {
@@ -1144,7 +1169,13 @@ html body footer .footer-wrapper .sm-wrapper i:hover {
   html header .header-wrapper nav .main-navigation {
     gap: 6em;
   }
-  html main #music .music-content-wrapper .slider-wrapper {
-    gap: 20em;
+  html main #music h1 {
+    margin-bottom: 12em;
+  }
+  html main #music .music-content-wrapper {
+    gap: 40em;
+  }
+  html main #videos .video-slider-wrapper {
+    width: 100em;
   }
 }/*# sourceMappingURL=style.css.map */

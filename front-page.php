@@ -28,13 +28,8 @@
     <h1 data-observe>MUSIC</H1>
     <div data-observe class="music-content-wrapper">
       <div class="slider-wrapper">
-        <div class="data-wrapper">
-          <button class="prev-btn" data-music-btn="prev"><i class='fa fa-angle-left'></i></button>
-          <button class="next-btn" data-music-btn="next"><i class='fa fa-angle-right'></i></button>
-          <div class="ep-data">
-            <h3 class="ep-title"></h3>
-          </div>  
-        </div>
+        <button class="prev-btn" data-music-btn="prev"><i class='fa fa-angle-left'></i></button>
+        <button class="next-btn" data-music-btn="next"><i class='fa fa-angle-right'></i></button>
         <?php 
           $img_src1 = get_template_directory_uri() . '/images/artwork/home.jpg';
           $img_src2 = get_template_directory_uri() . '/images/artwork/wuagi.webp';
@@ -68,21 +63,24 @@
             <img src=<?php echo $img_src7;?> loading="lazy">
           </div>
         </div>
+      </div>
+      <div class="ep-data">
+        <h3 class="ep-title"></h3>
         <a class="spotify-btn" href="#/" target="_blank">
           <i class="fa fa-spotify"></i>
           <span>LISTEN</span>
         </a>
-      </div>
-      <div class="spotify-wrapper">
-        <?php 
-          $spotify_query = new WP_Query("p=53");
-          while($spotify_query->have_posts()) {
-            $spotify_query->the_post();
-            the_content();
-          }
-          wp_reset_postdata();
-        ?>
-      </div>
+      </div>  
+    </div>
+    <div class="spotify-wrapper">
+      <?php 
+        $spotify_query = new WP_Query("p=53");
+        while($spotify_query->have_posts()) {
+          $spotify_query->the_post();
+          the_content();
+        }
+        wp_reset_postdata();
+      ?>
     </div>
   </section>
 

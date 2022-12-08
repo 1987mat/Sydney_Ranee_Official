@@ -2,10 +2,9 @@
   background-image: url('../images/3.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
+  background-position: center;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -15,7 +14,7 @@
       color: $font-color;
     }
 
-    padding-right: 1em;
+    margin-right: 1.5em;
     width: 35%;
     text-shadow: 0.5px 0.5px 0.5px #000000;
     transform: translateY(20px);
