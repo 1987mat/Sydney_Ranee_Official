@@ -6,14 +6,19 @@
 * {
   box-sizing: border-box;
   font-family: 'Belleza', sans-serif;
-  // border: 1px solid red;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 html {
-  // min-width: 100%;
-  // min-height: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
+
+  &.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+  }
 
   body {
     display: flex;

@@ -3,11 +3,18 @@
 * {
   box-sizing: border-box;
   font-family: "Belleza", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
+}
+html.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
 }
 html body {
   display: flex;
