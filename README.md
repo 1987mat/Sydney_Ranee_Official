@@ -1,16 +1,16 @@
 # Sydney Ranee` Official Website
 
-<p>Wordpress artist website developed with custom theme.</p>
+<p>Wordpress artist website. Custom theme developed with HTML, SASS, JS and PHP. Fully responsive.</p>
 
 ## Links
 
-- [Repo](https://github.com/1987mat/Sydney_Ranee 'Repo')
+- [Repo](https://github.com/1987mat/Sydney_Ranee_Official 'Repo')
 
-<!-- - [Live](<Homepage url> "Live View") -->
+- [Live](https://sydneyranee.com 'Live View')
 
 ## Screenshots
 
-<!-- <img src="https://user-images.githubusercontent.com/64235918/194164867-d4315de5-7281-4bea-a3b0-2334e09aeb47.png" width="400"/> -->
+<img src="https://user-images.githubusercontent.com/64235918/206808893-42789895-a63e-49f2-845c-713f7e173a34.png" width="400"/>
 
 ## Built With
 
