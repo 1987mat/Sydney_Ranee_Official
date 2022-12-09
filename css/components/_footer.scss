@@ -1,7 +1,8 @@
 footer {
   background: $primary-color;
   font-weight: bold;
-  height: 8em;
+  height: fit-content;
+  padding: 1.8em;
   width: 100%;
 
   .footer-wrapper {
@@ -10,12 +11,6 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 2em;
-    padding: 1.5em;
-
-    span {
-      color: $font-color;
-      text-shadow: $text-shadow;
-    }
 
     .sm-wrapper {
       display: flex;
@@ -23,12 +18,39 @@ footer {
 
       i {
         color: $font-color;
-        font-size: 1.5rem;
+        font-size: 1rem;
         transition: transform 0.2s ease-in-out;
         text-shadow: $text-shadow;
 
         &:hover {
           @include smIconsHover();
+        }
+      }
+    }
+
+    span {
+      color: $font-color;
+      text-shadow: $text-shadow;
+    }
+
+    .footer-menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      gap: 0.5em;
+      margin-top: -1em;
+
+      span {
+        a {
+          text-decoration: none;
+          color: $font-color;
+          text-shadow: $text-shadow;
+          transition: color 0.2s ease;
+
+          &:hover {
+            color: lightgray;
+          }
         }
       }
     }

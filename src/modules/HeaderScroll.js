@@ -59,8 +59,12 @@ class HeaderScroll {
   }
 
   hideHeader() {
-    let currentScroll = scrollY;
-    if (currentScroll < this.previousScroll) {
+    let currentScroll = window.pageYOffset;
+
+    if (
+      currentScroll > this.previousScroll &&
+      currentScroll > this.navbarHeight
+    ) {
       this.header.classList.add('hide');
     } else {
       this.header.classList.remove('hide');

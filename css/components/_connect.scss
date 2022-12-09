@@ -21,69 +21,55 @@
     }
   }
 
-  .contact-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10em;
-    width: 90vw;
-    transform: translateY(50px);
-    transition: transform 0.9s ease;
-
-    &.fade-in {
-      transform: translateY(0);
-    }
-
+  .wpforms-container {
     form {
-      padding: 5em;
+      background: rgba(237, 224, 212, 0.7);
+      gap: 1.5em;
+      width: 60vw;
       border-radius: 2px;
-      background: rgba(237, 224, 212, 0.85);
+      border: none;
+      -moz-box-shadow: 0 0 5px gray;
+      -webkit-box-shadow: 0 0 5px gray;
+      box-shadow: 0 0 5px gray;
       display: flex;
       flex-direction: column;
-      gap: 1.5em;
-      width: 60%;
-      box-shadow: 0.5px 0.5px 0.5px #282828;
+      justify-content: center;
+      align-items: center;
+      padding: 2em;
 
-      ::placeholder {
-        color: #282828;
+      .wpforms-field-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2em;
+        width: 100%;
+
+        input {
+          border-top: none;
+          border-left: none;
+          border-right: none;
+          border-bottom: 1px solid;
+          border-radius: 0;
+          background-color: transparent;
+        }
       }
 
-      input {
-        background-color: transparent;
-        border-radius: 2px;
-        border: 1px solid #282828;
-        border-top: none;
-        outline: none;
-        font-size: 0.8rem;
-        padding: 1em;
-      }
+      .wpforms-submit-container {
+        button {
+          border-radius: 5px;
+          border: none;
+          padding: 1em;
+          width: 15em;
+          -moz-box-shadow: 0 0 5px gray;
+          -webkit-box-shadow: 0 0 5px gray;
+          box-shadow: 0 0 5px gray;
+          font-weight: bold;
+          text-transform: uppercase;
+          transition: background-color 0.4s ease;
 
-      textarea {
-        background-color: transparent;
-        outline: none;
-        height: 10em;
-        resize: none;
-        border: 1px solid #282828;
-        border-radius: 2px;
-        padding: 1em;
-        font-size: 0.8rem;
-        border-top: none;
-      }
-
-      .submit-btn {
-        background-color: $secondary-color;
-        border: none;
-        border-radius: 2px;
-        box-shadow: 0 2px 2px -2px #282828;
-        font-weight: bold;
-        height: 4em;
-        text-transform: uppercase;
-        color: $font-color;
-        transition: background-color 0.9s ease;
-
-        &:hover {
-          cursor: pointer;
-          background-color: #3ec13e;
+          &:hover {
+            background-color: $secondary-color;
+          }
         }
       }
     }

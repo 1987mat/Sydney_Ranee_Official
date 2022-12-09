@@ -164,16 +164,10 @@
 
   <!-- CONTACT FORM -->
   <section id="connect">
-    <h1 data-observe>GET IN TOUCH</h1>
+    <h1 data-observe>SUBSCRIBE</h1>
     <div data-observe class="contact-wrapper">
-      <form>
-        <input type="text" placeholder="First Name" required>
-        <input type="text" placeholder="Last Name" required>
-        <input type="email" placeholder="Email" required>
-        <textarea placeholder="Your message" required></textarea>
-        <input type="submit" class="submit-btn">
-      </form>
-    </div>
+      <?php echo the_content(); ?>
+    </div> 
   </section> 
 </main>
 

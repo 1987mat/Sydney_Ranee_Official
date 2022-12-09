@@ -84,7 +84,7 @@ html body header .sm-wrapper {
 html body header .sm-wrapper i {
   color: white;
   transition: transform 0.2s ease-in-out;
-  text-shadow: 1px 1px 1px #282828;
+  text-shadow: 0.8px 0.8px 0.8px #282828;
 }
 html body header .sm-wrapper i:hover {
   transform: scale(1.2);
@@ -176,7 +176,7 @@ html body main .new-ep .ep-container .music-icons-wrapper {
 html body main .new-ep .ep-container .music-icons-wrapper i {
   font-size: 2rem;
   color: #b2e6b2;
-  text-shadow: 1px 1px 1px #282828;
+  text-shadow: 0.8px 0.8px 0.8px #282828;
   transition: transform 0.2s ease-in-out;
 }
 html body main .new-ep .ep-container .music-icons-wrapper i:hover {
@@ -401,8 +401,8 @@ html body main #videos h1.fade-in {
 }
 html body main #videos .video-modal {
   border-radius: 2px;
-  width: 90vw;
-  height: 80vh;
+  width: 80vw;
+  height: 30em;
   position: absolute;
   top: 20em;
   opacity: 0;
@@ -560,71 +560,46 @@ html body main #connect h1 {
 html body main #connect h1.fade-in {
   transform: translateY(0);
 }
-html body main #connect .contact-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10em;
-  width: 90vw;
-  transform: translateY(50px);
-  transition: transform 0.9s ease;
-}
-html body main #connect .contact-wrapper.fade-in {
-  transform: translateY(0);
-}
-html body main #connect .contact-wrapper form {
-  padding: 5em;
+html body main #connect .wpforms-container form {
+  background: rgba(237, 224, 212, 0.7);
+  gap: 1.5em;
+  width: 60vw;
   border-radius: 2px;
-  background: rgba(237, 224, 212, 0.85);
+  border: none;
+  box-shadow: 0 0 5px gray;
   display: flex;
   flex-direction: column;
-  gap: 1.5em;
-  width: 60%;
-  box-shadow: 0.5px 0.5px 0.5px #282828;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
 }
-html body main #connect .contact-wrapper form ::-moz-placeholder {
-  color: #282828;
+html body main #connect .wpforms-container form .wpforms-field-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2em;
+  width: 100%;
 }
-html body main #connect .contact-wrapper form :-ms-input-placeholder {
-  color: #282828;
-}
-html body main #connect .contact-wrapper form ::placeholder {
-  color: #282828;
-}
-html body main #connect .contact-wrapper form input {
-  background-color: transparent;
-  border-radius: 2px;
-  border: 1px solid #282828;
+html body main #connect .wpforms-container form .wpforms-field-container input {
   border-top: none;
-  outline: none;
-  font-size: 0.8rem;
-  padding: 1em;
-}
-html body main #connect .contact-wrapper form textarea {
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid;
+  border-radius: 0;
   background-color: transparent;
-  outline: none;
-  height: 10em;
-  resize: none;
-  border: 1px solid #282828;
-  border-radius: 2px;
-  padding: 1em;
-  font-size: 0.8rem;
-  border-top: none;
 }
-html body main #connect .contact-wrapper form .submit-btn {
-  background-color: #b2e6b2;
+html body main #connect .wpforms-container form .wpforms-submit-container button {
+  border-radius: 5px;
   border: none;
-  border-radius: 2px;
-  box-shadow: 0 2px 2px -2px #282828;
+  padding: 1em;
+  width: 15em;
+  box-shadow: 0 0 5px gray;
   font-weight: bold;
-  height: 4em;
   text-transform: uppercase;
-  color: #ffffff;
-  transition: background-color 0.9s ease;
+  transition: background-color 0.4s ease;
 }
-html body main #connect .contact-wrapper form .submit-btn:hover {
-  cursor: pointer;
-  background-color: #3ec13e;
+html body main #connect .wpforms-container form .wpforms-submit-container button:hover {
+  background-color: #b2e6b2;
 }
 html body main .about-hero {
   background-image: url(../images/15.jpg);
@@ -639,7 +614,7 @@ html body main .about-hero {
 html body main .about-hero h1 {
   font-size: 4rem;
   color: #ffffff;
-  text-shadow: 1px 1px 1px #282828;
+  text-shadow: 0.8px 0.8px 0.8px #282828;
   transform: translateY(20px);
   transition: transform 0.9s ease;
 }
@@ -748,7 +723,10 @@ html body main .content-area #content img {
 html body footer {
   background: rgb(230, 204, 178);
   font-weight: bold;
-  height: 8em;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 1.8em;
   width: 100%;
 }
 html body footer .footer-wrapper {
@@ -757,11 +735,6 @@ html body footer .footer-wrapper {
   justify-content: center;
   align-items: center;
   gap: 2em;
-  padding: 1.5em;
-}
-html body footer .footer-wrapper span {
-  color: #ffffff;
-  text-shadow: 1px 1px 1px #282828;
 }
 html body footer .footer-wrapper .sm-wrapper {
   display: flex;
@@ -769,13 +742,34 @@ html body footer .footer-wrapper .sm-wrapper {
 }
 html body footer .footer-wrapper .sm-wrapper i {
   color: #ffffff;
-  font-size: 1.5rem;
+  font-size: 1rem;
   transition: transform 0.2s ease-in-out;
-  text-shadow: 1px 1px 1px #282828;
+  text-shadow: 0.8px 0.8px 0.8px #282828;
 }
 html body footer .footer-wrapper .sm-wrapper i:hover {
   transform: scale(1.2);
   cursor: pointer;
+}
+html body footer .footer-wrapper span {
+  color: #ffffff;
+  text-shadow: 0.8px 0.8px 0.8px #282828;
+}
+html body footer .footer-wrapper .footer-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: 0.5em;
+  margin-top: -1em;
+}
+html body footer .footer-wrapper .footer-menu span a {
+  text-decoration: none;
+  color: #ffffff;
+  text-shadow: 0.8px 0.8px 0.8px #282828;
+  transition: color 0.2s ease;
+}
+html body footer .footer-wrapper .footer-menu span a:hover {
+  color: lightgray;
 }
 
 /* MOBILE */
@@ -1171,7 +1165,7 @@ html body footer .footer-wrapper .sm-wrapper i:hover {
     gap: 4em;
   }
   html header .header-wrapper {
-    gap: 70em;
+    gap: 60em;
   }
   html header .header-wrapper nav .main-navigation {
     gap: 6em;

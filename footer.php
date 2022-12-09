@@ -11,7 +11,12 @@
           <a href="https://soundcloud.com/sydney-ranee" target="_blank"><i class="fa fa-soundcloud"></i></a>
           <a href="https://sydneyranee.bandcamp.com/" target="_blank"><i class="fa fa-bandcamp"></i></a>
         </div>  
-        <span>© 2022 by Sydney Ranee`. All rights reserved.</span>
+        <span>© 2022 by Sydney Raneé. All rights reserved.</span>
+        <div class="footer-menu">
+          <span><a href="<?php echo site_url('/terms-conditions');?>" target="_blank">Terms & Conditions</a></span>
+          <span>|</span>
+          <span><a href="<?php echo site_url('/privacy-policy');?>" target="_blank">Privacy Policy</a></span>
+        </div>
       </div>
     </footer>
     <?php 
