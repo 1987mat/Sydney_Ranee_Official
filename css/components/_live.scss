@@ -8,7 +8,7 @@
   h1 {
     text-align: center;
     margin-bottom: 3em;
-    margin-top: 2em;
+    margin-top: 3em;
     font-size: 3rem;
     color: $font-color;
     transform: translateY(50px);
@@ -41,6 +41,10 @@
       .bit-widget-container {
         .bit-upcoming-events {
           margin-top: 3em;
+        }
+
+        .bit-track-button {
+          border-radius: 2px;
         }
       }
     }

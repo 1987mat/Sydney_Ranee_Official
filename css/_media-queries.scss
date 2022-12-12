@@ -42,11 +42,8 @@
       }
 
       #videos {
-        h1 {
-          margin-bottom: 0;
-        }
-
         .video-slider-wrapper {
+          margin-top: -15em;
           width: 30em;
         }
       }
@@ -231,6 +228,7 @@
 
       #videos {
         .video-slider-wrapper {
+          margin-top: 0;
           width: 50em;
         }
       }
@@ -353,6 +351,8 @@
 
       #videos {
         .video-slider-wrapper {
+          margin-top: 4em;
+
           width: 60em;
         }
       }

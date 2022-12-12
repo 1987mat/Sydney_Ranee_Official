@@ -292,7 +292,7 @@ html body main #music .music-content-wrapper .music-slider-container .slide {
 }
 html body main #music .music-content-wrapper .music-slider-container .slide img {
   border-radius: 2px;
-  box-shadow: 2px 2px 2px #282828;
+  box-shadow: 0 0 6px #282828;
 }
 html body main #music .music-content-wrapper .music-slider-container .slide[data-active] {
   opacity: 1;
@@ -337,6 +337,7 @@ html body main #music .spotify-wrapper {
 html body main #music .spotify-wrapper iframe {
   width: 100%;
   height: 30em;
+  box-shadow: 0 0 8px #282828;
 }
 html body main #live {
   background-image: url(../images/live-photo.jpg);
@@ -348,7 +349,7 @@ html body main #live {
 html body main #live h1 {
   text-align: center;
   margin-bottom: 3em;
-  margin-top: 2em;
+  margin-top: 3em;
   font-size: 3rem;
   color: #ffffff;
   transform: translateY(50px);
@@ -380,6 +381,9 @@ html body main #live .live-wrapper .dates-wrapper {
 html body main #live .live-wrapper .dates-wrapper .bit-widget-container .bit-upcoming-events {
   margin-top: 3em;
 }
+html body main #live .live-wrapper .dates-wrapper .bit-widget-container .bit-track-button {
+  border-radius: 2px;
+}
 html body main #videos {
   background: rgb(230, 204, 178);
   display: flex;
@@ -389,7 +393,7 @@ html body main #videos {
   position: relative;
 }
 html body main #videos h1 {
-  margin-top: 2em;
+  margin-top: 3em;
   margin-bottom: 2em;
   font-size: 3rem;
   color: #ffffff;
@@ -404,7 +408,6 @@ html body main #videos .video-modal {
   width: 80vw;
   height: 30em;
   position: absolute;
-  top: 20em;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s ease-in;
@@ -552,7 +555,7 @@ html body main #connect {
 html body main #connect h1 {
   color: #555555;
   text-align: center;
-  margin-top: 2em;
+  margin-top: 3em;
   font-size: 3rem;
   transform: translateY(50px);
   transition: transform 0.9s ease;
@@ -929,10 +932,8 @@ html body footer .footer-wrapper .footer-menu span a:hover {
   html main #live a {
     font-size: 60%;
   }
-  html main #videos h1 {
-    margin-bottom: 0;
-  }
   html main #videos .video-slider-wrapper {
+    margin-top: -15em;
     width: 30em;
   }
   html main #connect {
@@ -1023,6 +1024,7 @@ html body footer .footer-wrapper .footer-menu span a:hover {
     gap: 20em;
   }
   html main #videos .video-slider-wrapper {
+    margin-top: 0;
     width: 50em;
   }
 }
@@ -1104,6 +1106,7 @@ html body footer .footer-wrapper .footer-menu span a:hover {
     font-size: 100%;
   }
   html main #videos .video-slider-wrapper {
+    margin-top: 4em;
     width: 60em;
   }
   html main .about-hero {
