@@ -336,7 +336,6 @@ html body main #music .spotify-wrapper {
 }
 html body main #music .spotify-wrapper iframe {
   width: 100%;
-  height: 30em;
   box-shadow: 0 0 8px #282828;
 }
 html body main #live {
@@ -755,7 +754,6 @@ html body footer .footer-wrapper .sm-wrapper i:hover {
 }
 html body footer .footer-wrapper span {
   color: #ffffff;
-  text-shadow: 0.8px 0.8px 0.8px #282828;
 }
 html body footer .footer-wrapper .footer-menu {
   display: flex;
@@ -768,11 +766,12 @@ html body footer .footer-wrapper .footer-menu {
 html body footer .footer-wrapper .footer-menu span a {
   text-decoration: none;
   color: #ffffff;
-  text-shadow: 0.8px 0.8px 0.8px #282828;
-  transition: color 0.2s ease;
+  transition: -webkit-text-decoration 0.2s ease;
+  transition: text-decoration 0.2s ease;
+  transition: text-decoration 0.2s ease, -webkit-text-decoration 0.2s ease;
 }
 html body footer .footer-wrapper .footer-menu span a:hover {
-  color: lightgray;
+  text-decoration: underline;
 }
 
 /* MOBILE */
@@ -908,11 +907,11 @@ html body footer .footer-wrapper .footer-menu span a:hover {
   }
   html header .sm-wrapper {
     margin-left: 4em;
-    gap: 1.5em;
+    gap: 3em;
   }
   html header .sm-wrapper a i {
-    font-size: 50%;
     color: whitesmoke;
+    font-size: 1.2rem;
   }
   html main .new-ep h1 {
     padding: 0 2em;
@@ -961,9 +960,6 @@ html body footer .footer-wrapper .footer-menu span a:hover {
   }
   html header nav .main-navigation li a {
     font-size: 2rem;
-  }
-  html header .sm-wrapper {
-    gap: 2em;
   }
   html main #music h1 {
     margin-bottom: 5em;
@@ -1015,10 +1011,10 @@ html body footer .footer-wrapper .footer-menu span a:hover {
     font-size: 3rem;
   }
   html header .sm-wrapper {
-    gap: 4.5em;
+    gap: 4em;
   }
   html header .sm-wrapper a i {
-    font-size: 80%;
+    font-size: 1.5rem;
   }
   html main #music .music-content-wrapper {
     gap: 20em;
@@ -1029,6 +1025,12 @@ html body footer .footer-wrapper .footer-menu span a:hover {
   }
 }
 @media screen and (min-width: 800px) {
+  html header .sm-wrapper {
+    gap: 6em;
+  }
+  html header .sm-wrapper a i {
+    font-size: 1.5rem;
+  }
   html main #music h1 {
     margin-bottom: 8em;
   }
@@ -1052,6 +1054,7 @@ html body footer .footer-wrapper .footer-menu span a:hover {
   }
   html header {
     background-color: initial;
+    gap: 1em;
   }
   html header .header-wrapper {
     gap: 15em;
@@ -1088,7 +1091,7 @@ html body footer .footer-wrapper .footer-menu span a:hover {
     text-shadow: 1px 1px 1px #282828;
   }
   html header .sm-wrapper {
-    gap: 3em;
+    gap: 5em;
   }
   html header .sm-wrapper a i {
     font-size: 1rem;

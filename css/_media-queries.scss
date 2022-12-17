@@ -100,10 +100,6 @@
           }
         }
       }
-
-      .sm-wrapper {
-        gap: 2em;
-      }
     }
 
     main {
@@ -173,15 +169,6 @@
 @media screen and (min-width: 599px) {
   html {
     main {
-      // #music {
-      //   .music-content-wrapper {
-      //     gap: 15em;
-
-      //     .slider-wrapper {
-      //       gap: 12em;
-      //     }
-      //   }
-      // }
       #videos {
         .video-slider-wrapper {
           width: 60em;
@@ -209,11 +196,11 @@
       }
 
       .sm-wrapper {
-        gap: 4.5em;
+        gap: 4em;
 
         a {
           i {
-            font-size: 80%;
+            font-size: 1.5rem;
           }
         }
       }
@@ -238,6 +225,18 @@
 
 @media screen and (min-width: 800px) {
   html {
+    header {
+      .sm-wrapper {
+        gap: 6em;
+
+        a {
+          i {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+
     main {
       #music {
         h1 {
@@ -272,6 +271,7 @@
 
     header {
       background-color: initial;
+      gap: 1em;
 
       .header-wrapper {
         gap: 15em;
@@ -316,8 +316,7 @@
       }
 
       .sm-wrapper {
-        gap: 3em;
-
+        gap: 5em;
         a {
           i {
             font-size: 1rem;
@@ -352,7 +351,6 @@
       #videos {
         .video-slider-wrapper {
           margin-top: 4em;
-
           width: 60em;
         }
       }

@@ -39,8 +39,10 @@ class HeaderScroll {
     // Header fade in / fade out on all pages
     if (this.aboutWrapper && window.scrollY >= this.aboutWrapper.offsetTop || this.currentSection === 'music') {
       this.header.classList.add('fade');
+      this.header.style.boxShadow = '0 6px 6px -6px #282828';
     } else if (this.aboutWrapper && window.scrollY <= this.aboutWrapper.offsetTop || this.currentSection === 'home') {
       this.header.classList.remove('fade');
+      this.header.style.boxShadow = '';
     }
   }
 
