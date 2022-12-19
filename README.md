@@ -1,4 +1,4 @@
-# Sydney Ranee` Official Website
+# Sydney Raneé Official Website
 
 <p>Wordpress artist website. Custom theme developed with HTML, SASS, JS and PHP. Fully responsive.</p>
 

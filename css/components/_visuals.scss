@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  padding-bottom: 2em;
 
   h1 {
     margin-top: 3em;
@@ -72,8 +73,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 50em;
-    margin-bottom: 6em;
+    height: 40em;
     transform: translateY(50px);
     transition: transform 0.9s ease;
 

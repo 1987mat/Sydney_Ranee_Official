@@ -43,7 +43,7 @@
 
       #videos {
         .video-slider-wrapper {
-          margin-top: -15em;
+          margin-top: -5em;
           width: 30em;
         }
       }
@@ -114,7 +114,7 @@
 
 @media screen and (min-width: 413px) {
   html {
-    font-size: 65%;
+    font-size: 75%;
 
     header {
       nav {
@@ -133,7 +133,7 @@
 /* MOBILE LANDSCAPE */
 @media screen and (min-width: 480px) {
   html {
-    font-size: 60%;
+    font-size: 70%;
 
     header {
       .sm-wrapper {
@@ -160,6 +160,7 @@
       #videos {
         .video-slider-wrapper {
           width: 40em;
+          margin: 1em 0;
         }
       }
     }
@@ -196,7 +197,7 @@
       }
 
       .sm-wrapper {
-        gap: 4em;
+        gap: 6em;
 
         a {
           i {
@@ -215,7 +216,7 @@
 
       #videos {
         .video-slider-wrapper {
-          margin-top: 0;
+          margin-bottom: 4em;
           width: 50em;
         }
       }

@@ -192,6 +192,7 @@ html body main #music {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 5em;
   gap: 3em;
 }
 html body main #music h1 {
@@ -390,6 +391,7 @@ html body main #videos {
   justify-content: center;
   align-items: center;
   position: relative;
+  padding-bottom: 2em;
 }
 html body main #videos h1 {
   margin-top: 3em;
@@ -449,8 +451,7 @@ html body main #videos .video-slider-wrapper {
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 50em;
-  margin-bottom: 6em;
+  height: 40em;
   transform: translateY(50px);
   transition: transform 0.9s ease;
 }
@@ -907,7 +908,7 @@ html body footer .footer-wrapper .footer-menu span a:hover {
   }
   html header .sm-wrapper {
     margin-left: 4em;
-    gap: 3em;
+    gap: 3.5em;
   }
   html header .sm-wrapper a i {
     color: whitesmoke;
@@ -932,7 +933,7 @@ html body footer .footer-wrapper .footer-menu span a:hover {
     font-size: 60%;
   }
   html main #videos .video-slider-wrapper {
-    margin-top: -15em;
+    margin-top: -5em;
     width: 30em;
   }
   html main #connect {
@@ -967,7 +968,7 @@ html body footer .footer-wrapper .footer-menu span a:hover {
 }
 @media screen and (min-width: 413px) {
   html {
-    font-size: 65%;
+    font-size: 75%;
   }
   html header nav .main-navigation li a {
     font-size: 2.2rem;
@@ -976,7 +977,7 @@ html body footer .footer-wrapper .footer-menu span a:hover {
 /* MOBILE LANDSCAPE */
 @media screen and (min-width: 480px) {
   html {
-    font-size: 60%;
+    font-size: 70%;
   }
   html header .sm-wrapper {
     gap: 3em;
@@ -992,6 +993,7 @@ html body footer .footer-wrapper .footer-menu span a:hover {
   }
   html main #videos .video-slider-wrapper {
     width: 40em;
+    margin: 1em 0;
   }
 }
 @media screen and (min-width: 599px) {
@@ -1011,7 +1013,7 @@ html body footer .footer-wrapper .footer-menu span a:hover {
     font-size: 3rem;
   }
   html header .sm-wrapper {
-    gap: 4em;
+    gap: 6em;
   }
   html header .sm-wrapper a i {
     font-size: 1.5rem;
@@ -1020,7 +1022,7 @@ html body footer .footer-wrapper .footer-menu span a:hover {
     gap: 20em;
   }
   html main #videos .video-slider-wrapper {
-    margin-top: 0;
+    margin-bottom: 4em;
     width: 50em;
   }
 }
