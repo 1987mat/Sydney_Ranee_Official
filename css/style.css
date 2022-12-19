@@ -980,10 +980,10 @@ html body footer .footer-wrapper .footer-menu span a:hover {
     font-size: 70%;
   }
   html header .sm-wrapper {
-    gap: 3em;
+    gap: 6em;
   }
   html header .sm-wrapper a i {
-    font-size: 70%;
+    font-size: 100%;
   }
   html main #music h1 {
     margin-bottom: 6em;
