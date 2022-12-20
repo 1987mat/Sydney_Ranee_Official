@@ -459,6 +459,7 @@ html body main #videos .video-slider-wrapper.fade-in {
   transform: translateY(0);
 }
 html body main #videos .video-slider-wrapper .prev {
+  color: black;
   position: absolute;
   top: 45%;
   left: 0;
@@ -480,6 +481,7 @@ html body main #videos .video-slider-wrapper .prev.hide {
   display: none;
 }
 html body main #videos .video-slider-wrapper .next {
+  color: black;
   position: absolute;
   top: 45%;
   right: 0;
