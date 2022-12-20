@@ -462,7 +462,7 @@ html body main #videos .video-slider-wrapper .prev {
   color: black;
   position: absolute;
   top: 45%;
-  left: 0;
+  left: -5px;
   border: none;
   background-color: transparent;
   transition: color 0.4s ease;
@@ -484,7 +484,7 @@ html body main #videos .video-slider-wrapper .next {
   color: black;
   position: absolute;
   top: 45%;
-  right: 0;
+  right: -5px;
   border: none;
   background-color: transparent;
   transition: color 0.4s ease;
