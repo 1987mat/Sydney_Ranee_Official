@@ -1,5 +1,16 @@
-/* MOBILE */
-@media screen and (min-width: 320px) {
+$mobilePortrait: 320px;
+$iphone8: 374px;
+$iphonePlus: 413px;
+$mobileLandscape: 480px;
+$tablet: 768px;
+$iPadPro: 833px;
+$desktop: 992px;
+$iPadPro12: 1023px;
+$largeDesktop: 1200px;
+$biggerScreen: 2073px;
+$biggerScreen2: 2559px;
+
+@media screen and (min-width: $mobilePortrait) {
   html {
     font-size: 60%;
 
@@ -12,11 +23,14 @@
         }
 
         .music-icons-wrapper {
-          gap: 2em;
+          gap: 3.5em;
         }
       }
 
       #music {
+        padding-bottom: 5em;
+        gap: 5em;
+
         h1 {
           margin-bottom: 4em;
         }
@@ -37,7 +51,7 @@
 
       #live {
         a {
-          font-size: 60%;
+          font-size: 100%;
         }
       }
 
@@ -59,9 +73,13 @@
       }
 
       .bio-wrapper {
+        align-items: center;
+
         .bio-text {
+          width: 85vw;
+
           p {
-            font-size: 60%;
+            font-size: 1.8rem;
           }
         }
       }
@@ -85,17 +103,17 @@
   }
 }
 
-@media screen and (min-width: 374px) {
+@media screen and (min-width: $iphone8) {
   html {
     font-size: 60%;
     header {
-      nav {
-        .main-navigation {
-          li {
-            margin: 0.2em;
-
-            a {
-              font-size: 2rem;
+      .header-wrapper {
+        nav {
+          .main-navigation {
+            li {
+              a {
+                font-size: 2.8rem;
+              }
             }
           }
         }
@@ -108,20 +126,30 @@
           margin-bottom: 5em;
         }
       }
+
+      .bio-wrapper {
+        .bio-text {
+          p {
+            font-size: 2rem;
+          }
+        }
+      }
     }
   }
 }
 
-@media screen and (min-width: 413px) {
+@media screen and (min-width: $iphonePlus) {
   html {
     font-size: 75%;
 
     header {
-      nav {
-        .main-navigation {
-          li {
-            a {
-              font-size: 2.2rem;
+      .header-wrapper {
+        nav {
+          .main-navigation {
+            li {
+              a {
+                font-size: 2.2rem;
+              }
             }
           }
         }
@@ -130,8 +158,7 @@
   }
 }
 
-/* MOBILE LANDSCAPE */
-@media screen and (min-width: 480px) {
+@media screen and (min-width: $mobileLandscape) {
   html {
     font-size: 70%;
 
@@ -152,12 +179,15 @@
         h1 {
           margin-bottom: 6em;
         }
+
         .music-content-wrapper {
           gap: 12em;
         }
       }
 
       #videos {
+        padding-bottom: 8em;
+
         .video-slider-wrapper {
           width: 40em;
           margin: 1em 0;
@@ -179,29 +209,27 @@
   }
 }
 
-/* TABLET */
-@media screen and (min-width: 768px) and (orientation: portrait) {
+@media screen and (min-width: $tablet) and (orientation: portrait) {
   html {
-    font-size: 80%;
+    font-size: 90%;
 
     header {
-      nav {
-        .main-navigation {
-          li {
-            margin: 0.4em;
-            a {
-              font-size: 3rem;
+      background-color: red;
+      .header-wrapper {
+        nav {
+          .main-navigation {
+            padding: 5em;
+            li {
+              margin: 1.2em;
             }
           }
         }
-      }
 
-      .sm-wrapper {
-        gap: 6em;
+        .sm-wrapper {
+          gap: 6em;
 
-        a {
-          i {
-            font-size: 1.5rem;
+          a {
+            font-size: 3rem;
           }
         }
       }
@@ -210,7 +238,7 @@
     main {
       #music {
         .music-content-wrapper {
-          gap: 20em;
+          gap: 12em;
         }
       }
 
@@ -251,22 +279,38 @@
   }
 }
 
-/* IPAD PRO 10.5" */
-@media screen and (min-width: 834px) and (orientation: portrait) {
+@media screen and (min-width: $iPadPro) and (orientation: portrait) {
   html {
     font-size: 85%;
     header {
-      nav {
-        .main-navigation {
-          padding: 3em;
+      .header-wrapper {
+        nav {
+          .main-navigation {
+            padding: 6em;
+
+            li {
+              margin: 1.5em;
+
+              a {
+                font-size: 3rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    main {
+      #music {
+        .music-content-wrapper {
+          gap: 14em;
         }
       }
     }
   }
 }
 
-/* DESKTOP & TABLET LANDSCAPE */
-@media screen and (min-width: 992px) {
+@media screen and (min-width: $desktop) {
   html {
     font-size: 80%;
 
@@ -275,13 +319,13 @@
       gap: 1em;
 
       .header-wrapper {
-        gap: 15em;
+        gap: 12em;
         justify-content: space-between;
 
         .logo-wrapper {
           display: block;
-          margin-left: 2em;
-          margin-top: 0.5em;
+          padding-left: 1em;
+          padding-top: 0.8em;
           width: 20em;
 
           img {
@@ -300,12 +344,12 @@
           opacity: 1;
 
           .main-navigation {
-            gap: 2em;
+            gap: 3em;
             padding: 0;
             flex-direction: row;
 
             li {
-              padding: 0;
+              margin: 0;
 
               a {
                 font-size: 1.3rem;
@@ -318,6 +362,7 @@
 
       .sm-wrapper {
         gap: 5em;
+
         a {
           i {
             font-size: 1rem;
@@ -359,6 +404,18 @@
       .about-hero {
         background-position: initial;
       }
+
+      .bio-wrapper {
+        align-items: flex-start;
+
+        .bio-text {
+          width: 50vw;
+
+          p {
+            font-size: 1.2rem;
+          }
+        }
+      }
     }
 
     footer {
@@ -375,70 +432,43 @@
   }
 }
 
-/* IPAD PRO 12.5" */
-@media screen and (min-width: 1024px) and (orientation: portrait) {
+@media screen and (min-width: $iPadPro12) and (orientation: portrait) {
   html {
     header {
       .header-wrapper {
-        gap: 12em;
+        gap: 8em;
       }
     }
   }
 }
 
-/* LARGE SCREENS */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: $largeDesktop) {
   html {
     font-size: 100%;
 
-    main {
-      #music {
-        h1 {
-          margin-bottom: 8em;
-        }
+    header {
+      .header-wrapper {
+        gap: 18em;
 
-        .music-content-wrapper {
-          gap: 20em;
-        }
-      }
-
-      #videos {
-        .video-slider-wrapper {
-          width: 70em;
+        nav {
+          .main-navigation {
+            gap: 2.5em;
+          }
         }
       }
     }
   }
 }
 
-/* BIGGER SCREENS */
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: $biggerScreen) {
   html {
-    font-size: 100%;
-
     header {
       .header-wrapper {
         gap: 20em;
 
         nav {
           .main-navigation {
-            gap: 6em;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 2074px) {
-  html {
-    header {
-      .header-wrapper {
-        gap: 40em;
-
-        nav {
-          .main-navigation {
-            gap: 6em;
+            gap: 10em;
           }
         }
       }
@@ -446,21 +476,37 @@
 
     main {
       #music {
+        padding-bottom: 10em;
+        gap: 10em;
+
         h1 {
           margin-bottom: 10em;
         }
+
         .music-content-wrapper {
           gap: 30em;
+        }
+      }
+
+      #videos {
+        padding-bottom: 10em;
+
+        h1 {
+          margin-bottom: 1em;
         }
       }
     }
   }
 }
 
-@media screen and (min-width: 2559px) {
+@media screen and (min-width: $biggerScreen2) {
   html {
     header {
       gap: 4em;
+
+      .logo-wrapper {
+        margin-top: 1em;
+      }
 
       .header-wrapper {
         gap: 60em;
@@ -476,7 +522,7 @@
     main {
       #music {
         h1 {
-          margin-bottom: 12em;
+          margin-bottom: 15em;
         }
 
         .music-content-wrapper {
@@ -485,8 +531,10 @@
       }
 
       #videos {
-        .video-slider-wrapper {
-          width: 100em;
+        padding-bottom: 20em;
+
+        h1 {
+          margin-bottom: 5em;
         }
       }
     }

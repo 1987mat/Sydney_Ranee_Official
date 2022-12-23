@@ -192,8 +192,6 @@ html body main #music {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 5em;
-  gap: 3em;
 }
 html body main #music h1 {
   color: #ffffff;
@@ -391,11 +389,9 @@ html body main #videos {
   justify-content: center;
   align-items: center;
   position: relative;
-  padding-bottom: 2em;
 }
 html body main #videos h1 {
   margin-top: 3em;
-  margin-bottom: 2em;
   font-size: 3rem;
   color: #ffffff;
   transform: translateY(50px);
@@ -633,9 +629,7 @@ html body main .about-wrapper {
 }
 html body main .about-wrapper .bio-wrapper {
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  align-items: flex-start;
   width: 100vw;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -647,12 +641,12 @@ html body main .about-wrapper .bio-wrapper {
   background-size: cover;
 }
 html body main .about-wrapper .bio-wrapper .bio-text {
-  background: rgba(237, 224, 212, 0.6);
+  background: rgba(237, 224, 212, 0.7);
   border-radius: 2px;
+  box-shadow: 0 0 6px gray;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  width: 70%;
   transform: translateY(50px);
   transition: transform 0.9s ease;
 }
@@ -661,8 +655,7 @@ html body main .about-wrapper .bio-wrapper .bio-text.fade-in {
 }
 html body main .about-wrapper .bio-wrapper .bio-text p {
   text-align: center;
-  color: #555555;
-  font-size: 1.2rem;
+  color: #282828;
   line-height: 2;
   padding: 1em;
 }
@@ -777,7 +770,6 @@ html body footer .footer-wrapper .footer-menu span a:hover {
   text-decoration: underline;
 }
 
-/* MOBILE */
 @media screen and (min-width: 320px) {
   html {
     font-size: 60%;
@@ -860,14 +852,14 @@ html body footer .footer-wrapper .footer-menu span a:hover {
     transition: transform 0.3s ease-in, opacity 0.3s ease-in;
   }
   html header .header-wrapper nav .main-navigation {
-    padding: 1em;
+    padding: 3em;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
   html header .header-wrapper nav .main-navigation li {
-    font-size: 1.5rem;
-    padding: 2em;
+    font-size: 2rem;
+    margin: 1.2em;
   }
   html header .header-wrapper nav .main-navigation li a {
     text-shadow: none;
@@ -920,7 +912,11 @@ html body footer .footer-wrapper .footer-menu span a:hover {
     padding: 0 2em;
   }
   html main .new-ep .music-icons-wrapper {
-    gap: 2em;
+    gap: 3.5em;
+  }
+  html main #music {
+    padding-bottom: 5em;
+    gap: 5em;
   }
   html main #music h1 {
     margin-bottom: 4em;
@@ -932,7 +928,7 @@ html body footer .footer-wrapper .footer-menu span a:hover {
     width: 80%;
   }
   html main #live a {
-    font-size: 60%;
+    font-size: 100%;
   }
   html main #videos .video-slider-wrapper {
     margin-top: -5em;
@@ -944,8 +940,14 @@ html body footer .footer-wrapper .footer-menu span a:hover {
   html main #connect .contact-wrapper form {
     min-width: 80%;
   }
+  html main .bio-wrapper {
+    align-items: center;
+  }
+  html main .bio-wrapper .bio-text {
+    width: 85vw;
+  }
   html main .bio-wrapper .bio-text p {
-    font-size: 60%;
+    font-size: 1.8rem;
   }
   html main .about-hero {
     background-position: center center;
@@ -958,25 +960,24 @@ html body footer .footer-wrapper .footer-menu span a:hover {
   html {
     font-size: 60%;
   }
-  html header nav .main-navigation li {
-    margin: 0.2em;
-  }
-  html header nav .main-navigation li a {
-    font-size: 2rem;
+  html header .header-wrapper nav .main-navigation li a {
+    font-size: 2.8rem;
   }
   html main #music h1 {
     margin-bottom: 5em;
+  }
+  html main .bio-wrapper .bio-text p {
+    font-size: 2rem;
   }
 }
 @media screen and (min-width: 413px) {
   html {
     font-size: 75%;
   }
-  html header nav .main-navigation li a {
+  html header .header-wrapper nav .main-navigation li a {
     font-size: 2.2rem;
   }
 }
-/* MOBILE LANDSCAPE */
 @media screen and (min-width: 480px) {
   html {
     font-size: 70%;
@@ -993,6 +994,9 @@ html body footer .footer-wrapper .footer-menu span a:hover {
   html main #music .music-content-wrapper {
     gap: 12em;
   }
+  html main #videos {
+    padding-bottom: 8em;
+  }
   html main #videos .video-slider-wrapper {
     width: 40em;
     margin: 1em 0;
@@ -1003,25 +1007,27 @@ html body footer .footer-wrapper .footer-menu span a:hover {
     width: 60em;
   }
 }
-/* TABLET */
 @media screen and (min-width: 768px) and (orientation: portrait) {
   html {
-    font-size: 80%;
+    font-size: 90%;
   }
-  html header nav .main-navigation li {
-    margin: 0.4em;
+  html header {
+    background-color: red;
   }
-  html header nav .main-navigation li a {
-    font-size: 3rem;
+  html header .header-wrapper nav .main-navigation {
+    padding: 5em;
   }
-  html header .sm-wrapper {
+  html header .header-wrapper nav .main-navigation li {
+    margin: 1.2em;
+  }
+  html header .header-wrapper .sm-wrapper {
     gap: 6em;
   }
-  html header .sm-wrapper a i {
-    font-size: 1.5rem;
+  html header .header-wrapper .sm-wrapper a {
+    font-size: 3rem;
   }
   html main #music .music-content-wrapper {
-    gap: 20em;
+    gap: 12em;
   }
   html main #videos .video-slider-wrapper {
     margin-bottom: 4em;
@@ -1042,16 +1048,23 @@ html body footer .footer-wrapper .footer-menu span a:hover {
     gap: 25em;
   }
 }
-/* IPAD PRO 10.5" */
-@media screen and (min-width: 834px) and (orientation: portrait) {
+@media screen and (min-width: 833px) and (orientation: portrait) {
   html {
     font-size: 85%;
   }
-  html header nav .main-navigation {
-    padding: 3em;
+  html header .header-wrapper nav .main-navigation {
+    padding: 6em;
+  }
+  html header .header-wrapper nav .main-navigation li {
+    margin: 1.5em;
+  }
+  html header .header-wrapper nav .main-navigation li a {
+    font-size: 3rem;
+  }
+  html main #music .music-content-wrapper {
+    gap: 14em;
   }
 }
-/* DESKTOP & TABLET LANDSCAPE */
 @media screen and (min-width: 992px) {
   html {
     font-size: 80%;
@@ -1061,13 +1074,13 @@ html body footer .footer-wrapper .footer-menu span a:hover {
     gap: 1em;
   }
   html header .header-wrapper {
-    gap: 15em;
+    gap: 12em;
     justify-content: space-between;
   }
   html header .header-wrapper .logo-wrapper {
     display: block;
-    margin-left: 2em;
-    margin-top: 0.5em;
+    padding-left: 1em;
+    padding-top: 0.8em;
     width: 20em;
   }
   html header .header-wrapper .logo-wrapper img {
@@ -1083,12 +1096,12 @@ html body footer .footer-wrapper .footer-menu span a:hover {
     opacity: 1;
   }
   html header .header-wrapper nav .main-navigation {
-    gap: 2em;
+    gap: 3em;
     padding: 0;
     flex-direction: row;
   }
   html header .header-wrapper nav .main-navigation li {
-    padding: 0;
+    margin: 0;
   }
   html header .header-wrapper nav .main-navigation li a {
     font-size: 1.3rem;
@@ -1119,49 +1132,45 @@ html body footer .footer-wrapper .footer-menu span a:hover {
   html main .about-hero {
     background-position: initial;
   }
+  html main .bio-wrapper {
+    align-items: flex-start;
+  }
+  html main .bio-wrapper .bio-text {
+    width: 50vw;
+  }
+  html main .bio-wrapper .bio-text p {
+    font-size: 1.2rem;
+  }
   html footer .footer-wrapper .sm-wrapper a i {
     font-size: initial;
   }
 }
-/* IPAD PRO 12.5" */
-@media screen and (min-width: 1024px) and (orientation: portrait) {
+@media screen and (min-width: 1023px) and (orientation: portrait) {
   html header .header-wrapper {
-    gap: 12em;
+    gap: 8em;
   }
 }
-/* LARGE SCREENS */
 @media screen and (min-width: 1200px) {
   html {
     font-size: 100%;
   }
-  html main #music h1 {
-    margin-bottom: 8em;
+  html header .header-wrapper {
+    gap: 18em;
   }
-  html main #music .music-content-wrapper {
-    gap: 20em;
-  }
-  html main #videos .video-slider-wrapper {
-    width: 70em;
+  html header .header-wrapper nav .main-navigation {
+    gap: 2.5em;
   }
 }
-/* BIGGER SCREENS */
-@media screen and (min-width: 1400px) {
-  html {
-    font-size: 100%;
-  }
+@media screen and (min-width: 2073px) {
   html header .header-wrapper {
     gap: 20em;
   }
   html header .header-wrapper nav .main-navigation {
-    gap: 6em;
+    gap: 10em;
   }
-}
-@media screen and (min-width: 2074px) {
-  html header .header-wrapper {
-    gap: 40em;
-  }
-  html header .header-wrapper nav .main-navigation {
-    gap: 6em;
+  html main #music {
+    padding-bottom: 10em;
+    gap: 10em;
   }
   html main #music h1 {
     margin-bottom: 10em;
@@ -1169,10 +1178,19 @@ html body footer .footer-wrapper .footer-menu span a:hover {
   html main #music .music-content-wrapper {
     gap: 30em;
   }
+  html main #videos {
+    padding-bottom: 10em;
+  }
+  html main #videos h1 {
+    margin-bottom: 1em;
+  }
 }
 @media screen and (min-width: 2559px) {
   html header {
     gap: 4em;
+  }
+  html header .logo-wrapper {
+    margin-top: 1em;
   }
   html header .header-wrapper {
     gap: 60em;
@@ -1181,12 +1199,15 @@ html body footer .footer-wrapper .footer-menu span a:hover {
     gap: 6em;
   }
   html main #music h1 {
-    margin-bottom: 12em;
+    margin-bottom: 15em;
   }
   html main #music .music-content-wrapper {
     gap: 40em;
   }
-  html main #videos .video-slider-wrapper {
-    width: 100em;
+  html main #videos {
+    padding-bottom: 20em;
+  }
+  html main #videos h1 {
+    margin-bottom: 5em;
   }
 }/*# sourceMappingURL=style.css.map */

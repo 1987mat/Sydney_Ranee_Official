@@ -86,14 +86,14 @@ header {
       transition: transform 0.3s ease-in, opacity 0.3s ease-in;
 
       .main-navigation {
-        padding: 1em;
+        padding: 3em;
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
         li {
-          font-size: 1.5rem;
-          padding: 2em;
+          font-size: 2rem;
+          margin: 1.2em;
 
           a {
             text-shadow: none;
