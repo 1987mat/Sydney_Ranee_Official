@@ -3,8 +3,8 @@
 * {
   box-sizing: border-box;
   font-family: "Belleza", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased !important;
+  text-rendering: optimizeLegibility !important;
 }
 
 html {
@@ -859,7 +859,7 @@ html body footer .footer-wrapper .footer-menu span a:hover {
     align-items: center;
   }
   html header .header-wrapper nav .main-navigation li {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin: 1.2em;
   }
   html header .header-wrapper nav .main-navigation li a {
@@ -961,8 +961,11 @@ html body footer .footer-wrapper .footer-menu span a:hover {
   html {
     font-size: 60%;
   }
+  html header .header-wrapper nav .main-navigation li {
+    margin: 1.5em;
+  }
   html header .header-wrapper nav .main-navigation li a {
-    font-size: 2.8rem;
+    font-size: 2.2rem;
   }
   html main #music h1 {
     margin-bottom: 5em;
@@ -974,6 +977,9 @@ html body footer .footer-wrapper .footer-menu span a:hover {
 @media screen and (min-width: 413px) {
   html {
     font-size: 75%;
+  }
+  html header .header-wrapper nav .main-navigation li {
+    margin: 1.2em;
   }
   html header .header-wrapper nav .main-navigation li a {
     font-size: 2.2rem;
@@ -1081,7 +1087,7 @@ html body footer .footer-wrapper .footer-menu span a:hover {
   html header .header-wrapper .logo-wrapper {
     display: block;
     position: relative;
-    top: 20px;
+    top: 22px;
     left: 25px;
     width: 20em;
   }
