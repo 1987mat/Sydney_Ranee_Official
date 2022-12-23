@@ -6,7 +6,6 @@ header {
   justify-content: center;
   align-items: center;
   position: fixed;
-  padding: 1em;
   top: 0;
   z-index: 20;
   background-color: transparent;
@@ -27,6 +26,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 
     a {
       text-decoration: none;

@@ -324,8 +324,9 @@ $biggerScreen2: 2559px;
 
         .logo-wrapper {
           display: block;
-          padding-left: 1em;
-          padding-top: 0.8em;
+          position: relative;
+          top: 18px;
+          left: 20px;
           width: 20em;
 
           img {
@@ -448,11 +449,11 @@ $biggerScreen2: 2559px;
 
     header {
       .header-wrapper {
-        gap: 18em;
+        gap: 20em;
 
         nav {
           .main-navigation {
-            gap: 2.5em;
+            gap: 3em;
           }
         }
       }
