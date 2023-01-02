@@ -1165,6 +1165,9 @@ html body footer .footer-wrapper .footer-menu span a:hover {
   html header .header-wrapper {
     gap: 20em;
   }
+  html header .header-wrapper .logo-wrapper {
+    top: 22px;
+  }
   html header .header-wrapper nav .main-navigation {
     gap: 3em;
   }
@@ -1174,7 +1177,7 @@ html body footer .footer-wrapper .footer-menu span a:hover {
     gap: 20em;
   }
   html header .header-wrapper .logo-wrapper {
-    top: 20px;
+    top: 25px;
   }
   html header .header-wrapper nav .main-navigation {
     gap: 10em;
