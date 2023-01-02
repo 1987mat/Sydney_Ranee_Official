@@ -27,17 +27,17 @@
     <h2 data-observe>MUSIC</h2>
     <div data-observe class="music-content-wrapper">
       <div class="slider-wrapper">
-        <button name="prev-button" class="prev-btn" data-music-btn="prev"><i class='fa fa-angle-left'></i></button>
-        <button name="next-button" class="next-btn" data-music-btn="next"><i class='fa fa-angle-right'></i></button>
+        <button aria-label="previous button" class="prev-btn" data-music-btn="prev"><i class='fa fa-angle-left'></i></button>
+        <button aria-label="next button" class="next-btn" data-music-btn="next"><i class='fa fa-angle-right'></i></button>
         <?php 
-          $img_src1 = get_template_directory_uri() . '/images/artwork/home.jpg';
-          $img_src2 = get_template_directory_uri() . '/images/artwork/wuagi.webp';
-          $img_src3 = get_template_directory_uri() . '/images/artwork/go-back.jpg';
-          $img_src4 = get_template_directory_uri() . '/images/artwork/complicated.jpg';
-          $img_src5 = get_template_directory_uri() . '/images/artwork/drop-my-guard.jpg';
-          $img_src6 = get_template_directory_uri() . '/images/artwork/dangerous-woman.jpg';
-          $img_src7 = get_template_directory_uri() . '/images/artwork/you-could.jpg';
-
+        // Get images from media library
+          $img_src1 = wp_get_attachment_image_url(114, 'large');
+          $img_src2 = wp_get_attachment_image_url(115, 'large');
+          $img_src3 = wp_get_attachment_image_url(113, 'large');
+          $img_src4 = wp_get_attachment_image_url(110, 'large');
+          $img_src5 = wp_get_attachment_image_url(112, 'large');
+          $img_src6 = wp_get_attachment_image_url(111, 'large');
+          $img_src7 = wp_get_attachment_image_url(116, 'large');
         ?>
         <div class="music-slider-container">
           <div class="slide" id="1" data-active>
@@ -112,49 +112,59 @@
       </div>
     </div>
     <div data-observe class="video-slider-wrapper">
-      <button name="prev-button" class="prev" data-carousel-btn="prev"><i class='fa fa-angle-left'></i></button>
-      <button name="next-button" class="next" data-carousel-btn="next"><i class='fa fa-angle-right'></i></button>
+      <button aria-label="previous button" class="prev" data-carousel-btn="prev"><i class='fa fa-angle-left'></i></button>
+      <button aria-label="next button" class="next" data-carousel-btn="next"><i class='fa fa-angle-right'></i></button>
+      <?php 
+      // Get video preview images
+        $video_preview_src1 = wp_get_attachment_image_url(119, 'large');
+        $video_preview_src2 = wp_get_attachment_image_url(118, 'large');
+        $video_preview_src3 = wp_get_attachment_image_url(120, 'large');
+        $video_preview_src4 = wp_get_attachment_image_url(123, 'large');
+        $video_preview_src5 = wp_get_attachment_image_url(117, 'large');
+        $video_preview_src6 = wp_get_attachment_image_url(122, 'large');
+        $video_preview_src7 = wp_get_attachment_image_url(121, 'large');
+      ?>
       <div class="slider-container">
         <div class="video-slide" data-active>
           <div class="video-slide-wrapper">
             <i class="fa fa-play-circle"></i>
-            <img class="video-img" src=<?php echo get_template_directory_uri() . '/images/video-thumbnails/reconnect.webp'; ?> alt="video-preview">
+            <img class="video-img" src=<?php echo $video_preview_src1;?> alt="video-preview">
           </div>
         </div>
         <div class="video-slide">
           <div class="video-slide-wrapper">
             <i class="fa fa-play-circle"></i>
-            <img class="video-img" src=<?php echo get_template_directory_uri() . '/images/video-thumbnails/wake-up.png'; ?> alt="video-preview">
+            <img class="video-img" src=<?php echo $video_preview_src2;?> alt="video-preview">
           </div>
         </div>
         <div class="video-slide">
           <div class="video-slide-wrapper">
             <i class="fa fa-play-circle"></i>
-            <img class="video-img" src=<?php echo get_template_directory_uri() . '/images/video-thumbnails/one-night.webp'; ?> alt="video-preview">
+            <img class="video-img" src=<?php echo $video_preview_src3; ?> alt="video-preview">
           </div>
         </div>
         <div class="video-slide">
           <div class="video-slide-wrapper">
             <i class="fa fa-play-circle"></i>
-            <img class="video-img" src=<?php echo get_template_directory_uri() . '/images/video-thumbnails/complicated.webp'; ?> alt="video-preview">
+            <img class="video-img" src=<?php echo $video_preview_src4; ?> alt="video-preview">
           </div>
         </div>
         <div class="video-slide">
           <div class="video-slide-wrapper">
             <i class="fa fa-play-circle"></i>
-            <img class="video-img" src=<?php echo get_template_directory_uri() . '/images/video-thumbnails/go-back.png'; ?> alt="video-preview">
+            <img class="video-img" src=<?php echo $video_preview_src5; ?> alt="video-preview">
           </div>
         </div>
         <div class="video-slide">
           <div class="video-slide-wrapper">
             <i class="fa fa-play-circle"></i>
-            <img class="video-img" src=<?php echo get_template_directory_uri() . '/images/video-thumbnails/drink.webp'; ?> alt="video-preview">
+            <img class="video-img" src=<?php echo $video_preview_src6; ?> alt="video-preview">
           </div>
         </div>
         <div class="video-slide">
           <div class="video-slide-wrapper">
             <i class="fa fa-play-circle"></i>
-            <img class="video-img" src=<?php echo get_template_directory_uri() . '/images/video-thumbnails/la-boys.webp'; ?> alt="video-preview">
+            <img class="video-img" src=<?php echo $video_preview_src7; ?> alt="video-preview">
           </div>
         </div>
       </div>

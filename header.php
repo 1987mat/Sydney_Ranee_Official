@@ -9,14 +9,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>The Sultry Songstress</title>
 </head>
-<body>
+<body <?php body_class();?>>
   <header>
     <div class="header-wrapper">
       <div class="hamburger">
         <div></div>
       </div>
       <a class="logo-wrapper" href="<?php echo site_url(''); ?>" aria-label="logo">
-        <img class="logo" src=<?php echo get_template_directory_uri() . '/images/logo.png'?> alt="logo">
+        <img class="logo" src="<?php echo wp_get_attachment_image_url(109, 'medium');?>">
       </a>
       <nav>
         <ul class="main-navigation">
@@ -38,4 +38,5 @@
       <a href="https://music.apple.com/us/artist/sydney-rane%C3%A9/662846360" target="_blank" aria-label="apple"><i class="fa fa-apple"></i></a>
     </div>
   </header>
+
   
