@@ -135,7 +135,7 @@ html body main .new-ep {
   align-items: center;
   gap: 4em;
 }
-html body main .new-ep h1 {
+html body main .new-ep h2 {
   margin-top: 2em;
   text-align: center;
   font-size: 4.5rem;
@@ -145,10 +145,10 @@ html body main .new-ep h1 {
   transform: translateY(50px);
   transition: transform 0.9s ease;
 }
-html body main .new-ep h1.fade-in {
+html body main .new-ep h2.fade-in {
   transform: translateY(0);
 }
-html body main .new-ep h2 {
+html body main .new-ep h3 {
   text-align: center;
   text-shadow: 1px 1px 2px #000000;
   color: #ffffff;
@@ -156,7 +156,7 @@ html body main .new-ep h2 {
   transform: translateY(50px);
   transition: transform 0.9s ease;
 }
-html body main .new-ep h2.fade-in {
+html body main .new-ep h3.fade-in {
   transform: translateY(0);
 }
 html body main .new-ep .ep-container {
@@ -194,14 +194,14 @@ html body main #music {
   justify-content: center;
   align-items: center;
 }
-html body main #music h1 {
-  color: #ffffff;
+html body main #music h2 {
+  color: #555555;
   margin-top: 3em;
   font-size: 3rem;
   transform: translateY(50px);
   transition: transform 0.9s ease;
 }
-html body main #music h1.fade-in {
+html body main #music h2.fade-in {
   transform: translateY(0);
 }
 html body main #music .music-content-wrapper {
@@ -345,7 +345,7 @@ html body main #live {
   background-position: center center;
   background-attachment: fixed;
 }
-html body main #live h1 {
+html body main #live h2 {
   text-align: center;
   margin-bottom: 3em;
   margin-top: 3em;
@@ -354,7 +354,7 @@ html body main #live h1 {
   transform: translateY(50px);
   transition: transform 0.9s ease;
 }
-html body main #live h1.fade-in {
+html body main #live h2.fade-in {
   transform: translateY(0);
 }
 html body main #live .live-wrapper {
@@ -391,14 +391,14 @@ html body main #videos {
   align-items: center;
   position: relative;
 }
-html body main #videos h1 {
+html body main #videos h2 {
   margin-top: 3em;
   font-size: 3rem;
-  color: #ffffff;
+  color: #555555;
   transform: translateY(50px);
   transition: transform 0.9s ease;
 }
-html body main #videos h1.fade-in {
+html body main #videos h2.fade-in {
   transform: translateY(0);
 }
 html body main #videos .video-modal {
@@ -551,7 +551,7 @@ html body main #connect {
   align-items: center;
   gap: 8em;
 }
-html body main #connect h1 {
+html body main #connect h2 {
   color: #555555;
   text-align: center;
   margin-top: 3em;
@@ -559,7 +559,7 @@ html body main #connect h1 {
   transform: translateY(50px);
   transition: transform 0.9s ease;
 }
-html body main #connect h1.fade-in {
+html body main #connect h2.fade-in {
   transform: translateY(0);
 }
 html body main #connect .wpforms-container form {
@@ -708,7 +708,7 @@ html body main .content-area #content .page-content {
   justify-content: center;
   align-items: center;
 }
-html body main .content-area #content .page-content h2 {
+html body main .content-area #content .page-content h1 {
   font-size: 3rem;
   text-align: center;
   color: #282828;
@@ -741,16 +741,16 @@ html body footer .footer-wrapper .sm-wrapper {
 }
 html body footer .footer-wrapper .sm-wrapper i {
   color: #ffffff;
+  color: #555555;
   font-size: 1rem;
   transition: transform 0.2s ease-in-out;
-  text-shadow: 0.8px 0.8px 0.8px #282828;
 }
 html body footer .footer-wrapper .sm-wrapper i:hover {
   transform: scale(1.2);
   cursor: pointer;
 }
 html body footer .footer-wrapper span {
-  color: #ffffff;
+  color: #555555;
 }
 html body footer .footer-wrapper .footer-menu {
   display: flex;
@@ -762,7 +762,7 @@ html body footer .footer-wrapper .footer-menu {
 }
 html body footer .footer-wrapper .footer-menu span a {
   text-decoration: none;
-  color: #ffffff;
+  color: #555555;
   transition: -webkit-text-decoration 0.2s ease;
   transition: text-decoration 0.2s ease;
   transition: text-decoration 0.2s ease, -webkit-text-decoration 0.2s ease;
@@ -909,7 +909,7 @@ html body footer .footer-wrapper .footer-menu span a:hover {
     color: whitesmoke;
     font-size: 1.2rem;
   }
-  html main .new-ep h1 {
+  html main .new-ep h2 {
     padding: 0 2em;
   }
   html main .new-ep .music-icons-wrapper {
@@ -919,7 +919,7 @@ html body footer .footer-wrapper .footer-menu span a:hover {
     padding-bottom: 5em;
     gap: 5em;
   }
-  html main #music h1 {
+  html main #music h2 {
     margin-bottom: 4em;
   }
   html main #music .music-content-wrapper {
@@ -967,7 +967,7 @@ html body footer .footer-wrapper .footer-menu span a:hover {
   html header .header-wrapper nav .main-navigation li a {
     font-size: 2.2rem;
   }
-  html main #music h1 {
+  html main #music h2 {
     margin-bottom: 5em;
   }
   html main .bio-wrapper .bio-text p {
@@ -995,7 +995,7 @@ html body footer .footer-wrapper .footer-menu span a:hover {
   html header .sm-wrapper a i {
     font-size: 100%;
   }
-  html main #music h1 {
+  html main #music h2 {
     margin-bottom: 6em;
   }
   html main #music .music-content-wrapper {
@@ -1048,7 +1048,7 @@ html body footer .footer-wrapper .footer-menu span a:hover {
   html header .sm-wrapper a i {
     font-size: 1.5rem;
   }
-  html main #music h1 {
+  html main #music h2 {
     margin-bottom: 8em;
   }
   html main #music .music-content-wrapper {
@@ -1124,7 +1124,7 @@ html body footer .footer-wrapper .footer-menu span a:hover {
   html main .new-ep .music-icons-wrapper {
     gap: 4em;
   }
-  html main #music h1 {
+  html main #music h2 {
     margin-bottom: 8em;
   }
   html main #music .music-content-wrapper {
@@ -1180,7 +1180,7 @@ html body footer .footer-wrapper .footer-menu span a:hover {
     padding-bottom: 10em;
     gap: 10em;
   }
-  html main #music h1 {
+  html main #music h2 {
     margin-bottom: 10em;
   }
   html main #music .music-content-wrapper {
@@ -1189,7 +1189,7 @@ html body footer .footer-wrapper .footer-menu span a:hover {
   html main #videos {
     padding-bottom: 10em;
   }
-  html main #videos h1 {
+  html main #videos h2 {
     margin-bottom: 1em;
   }
 }
@@ -1206,7 +1206,7 @@ html body footer .footer-wrapper .footer-menu span a:hover {
   html header .header-wrapper nav .main-navigation {
     gap: 6em;
   }
-  html main #music h1 {
+  html main #music h2 {
     margin-bottom: 15em;
   }
   html main #music .music-content-wrapper {
@@ -1215,7 +1215,7 @@ html body footer .footer-wrapper .footer-menu span a:hover {
   html main #videos {
     padding-bottom: 20em;
   }
-  html main #videos h1 {
+  html main #videos h2 {
     margin-bottom: 5em;
   }
 }/*# sourceMappingURL=style.css.map */

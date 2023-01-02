@@ -1,7 +1,6 @@
 <?php
   get_header();
 ?>
-
 <main>
   <div class="about-hero">
     <h1 data-observe>ABOUT</h1>
@@ -10,7 +9,7 @@
     <!-- BIO -->
     <div class="bio-wrapper">
       <div data-observe class="bio-text">
-        <?php the_content(); ?>
+        <?php the_content();?>
       </div>
     </div>
     <!-- PHOTOS -->
@@ -20,7 +19,7 @@
         $photos = array('2.jpg', '14.jpg', '6.jpg','7.jpg','10.jpg');
         foreach($photos as $photo) {
           echo "<div data-observe>
-                  <img src={$path}/{$photo}>
+                  <img src={$path}/{$photo} alt='artist-photo'>
                 </div>";
         }
       ?>

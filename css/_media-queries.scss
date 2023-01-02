@@ -18,7 +18,7 @@ $biggerScreen2: 2559px;
 
     main {
       .new-ep {
-        h1 {
+        h2 {
           padding: 0 2em;
         }
 
@@ -31,9 +31,10 @@ $biggerScreen2: 2559px;
         padding-bottom: 5em;
         gap: 5em;
 
-        h1 {
+        h2 {
           margin-bottom: 4em;
         }
+
         .music-content-wrapper {
           gap: 10em;
 
@@ -106,12 +107,14 @@ $biggerScreen2: 2559px;
 @media screen and (min-width: $iphone8) {
   html {
     font-size: 60%;
+
     header {
       .header-wrapper {
         nav {
           .main-navigation {
             li {
               margin: 1.5em;
+
               a {
                 font-size: 2.2rem;
               }
@@ -123,7 +126,7 @@ $biggerScreen2: 2559px;
 
     main {
       #music {
-        h1 {
+        h2 {
           margin-bottom: 5em;
         }
       }
@@ -178,7 +181,7 @@ $biggerScreen2: 2559px;
 
     main {
       #music {
-        h1 {
+        h2 {
           margin-bottom: 6em;
         }
 
@@ -270,9 +273,10 @@ $biggerScreen2: 2559px;
 
     main {
       #music {
-        h1 {
+        h2 {
           margin-bottom: 8em;
         }
+
         .music-content-wrapper {
           gap: 25em;
         }
@@ -284,6 +288,7 @@ $biggerScreen2: 2559px;
 @media screen and (min-width: $iPadPro) and (orientation: portrait) {
   html {
     font-size: 85%;
+
     header {
       .header-wrapper {
         nav {
@@ -382,7 +387,7 @@ $biggerScreen2: 2559px;
       }
 
       #music {
-        h1 {
+        h2 {
           margin-bottom: 8em;
         }
 
@@ -482,7 +487,7 @@ $biggerScreen2: 2559px;
         padding-bottom: 10em;
         gap: 10em;
 
-        h1 {
+        h2 {
           margin-bottom: 10em;
         }
 
@@ -494,7 +499,7 @@ $biggerScreen2: 2559px;
       #videos {
         padding-bottom: 10em;
 
-        h1 {
+        h2 {
           margin-bottom: 1em;
         }
       }
@@ -524,7 +529,7 @@ $biggerScreen2: 2559px;
 
     main {
       #music {
-        h1 {
+        h2 {
           margin-bottom: 15em;
         }
 
@@ -536,7 +541,7 @@ $biggerScreen2: 2559px;
       #videos {
         padding-bottom: 20em;
 
-        h1 {
+        h2 {
           margin-bottom: 5em;
         }
       }
