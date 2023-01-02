@@ -31,13 +31,13 @@
         <button aria-label="next button" class="next-btn" data-music-btn="next"><i class='fa fa-angle-right'></i></button>
         <?php 
         // Get images from media library
-          $img_src1 = wp_get_attachment_image_url(114, 'large');
-          $img_src2 = wp_get_attachment_image_url(115, 'large');
-          $img_src3 = wp_get_attachment_image_url(113, 'large');
-          $img_src4 = wp_get_attachment_image_url(110, 'large');
-          $img_src5 = wp_get_attachment_image_url(112, 'large');
-          $img_src6 = wp_get_attachment_image_url(111, 'large');
-          $img_src7 = wp_get_attachment_image_url(116, 'large');
+          $img_src1 = wp_get_attachment_image_url(121, 'large');
+          $img_src2 = wp_get_attachment_image_url(125, 'large');
+          $img_src3 = wp_get_attachment_image_url(120, 'large');
+          $img_src4 = wp_get_attachment_image_url(126, 'large');
+          $img_src5 = wp_get_attachment_image_url(122, 'large');
+          $img_src6 = wp_get_attachment_image_url(123, 'large');
+          $img_src7 = wp_get_attachment_image_url(124, 'large');
         ?>
         <div class="music-slider-container">
           <div class="slide" id="1" data-active>
@@ -116,13 +116,13 @@
       <button aria-label="next button" class="next" data-carousel-btn="next"><i class='fa fa-angle-right'></i></button>
       <?php 
       // Get video preview images
-        $video_preview_src1 = wp_get_attachment_image_url(119, 'large');
-        $video_preview_src2 = wp_get_attachment_image_url(118, 'large');
-        $video_preview_src3 = wp_get_attachment_image_url(120, 'large');
-        $video_preview_src4 = wp_get_attachment_image_url(123, 'large');
-        $video_preview_src5 = wp_get_attachment_image_url(117, 'large');
-        $video_preview_src6 = wp_get_attachment_image_url(122, 'large');
-        $video_preview_src7 = wp_get_attachment_image_url(121, 'large');
+        $video_preview_src1 = wp_get_attachment_image_url(115, 'large');
+        $video_preview_src2 = wp_get_attachment_image_url(114, 'large');
+        $video_preview_src3 = wp_get_attachment_image_url(116, 'large');
+        $video_preview_src4 = wp_get_attachment_image_url(113, 'large');
+        $video_preview_src5 = wp_get_attachment_image_url(119, 'large');
+        $video_preview_src6 = wp_get_attachment_image_url(118, 'large');
+        $video_preview_src7 = wp_get_attachment_image_url(117, 'large');
       ?>
       <div class="slider-container">
         <div class="video-slide" data-active>

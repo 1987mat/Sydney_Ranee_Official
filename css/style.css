@@ -1087,11 +1087,11 @@ html body footer .footer-wrapper .footer-menu span a:hover {
   html header .header-wrapper .logo-wrapper {
     display: block;
     position: relative;
-    top: 22px;
+    top: 15px;
     left: 25px;
   }
   html header .header-wrapper .logo-wrapper img {
-    width: 100%;
+    width: 80%;
   }
   html header .header-wrapper .hamburger {
     display: none;
@@ -1101,6 +1101,7 @@ html body footer .footer-wrapper .footer-menu span a:hover {
     background-color: initial;
     transform: translateX(0);
     opacity: 1;
+    padding-top: 0.5em;
   }
   html header .header-wrapper nav .main-navigation {
     gap: 3em;
@@ -1171,6 +1172,9 @@ html body footer .footer-wrapper .footer-menu span a:hover {
 @media screen and (min-width: 2073px) {
   html header .header-wrapper {
     gap: 20em;
+  }
+  html header .header-wrapper .logo-wrapper {
+    top: 20px;
   }
   html header .header-wrapper nav .main-navigation {
     gap: 10em;
