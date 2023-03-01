@@ -16,7 +16,7 @@
         <div></div>
       </div>
       <a class="logo-wrapper" href="<?php echo site_url(''); ?>" aria-label="logo">
-        <img class="logo" src="<?php echo wp_get_attachment_image_url(127, 'medium');?>">
+        <img class="logo" src="<?php echo wp_get_attachment_image_url(126, 'medium');?>">
       </a>
       <nav>
         <ul class="main-navigation">

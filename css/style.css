@@ -25,7 +25,6 @@ html body {
 }
 html body header {
   width: 100vw;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   display: flex;
@@ -210,7 +209,6 @@ html body main #music .music-content-wrapper {
   justify-content: center;
   align-items: center;
   width: 90vw;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   margin-bottom: 5em;
@@ -225,7 +223,6 @@ html body main #music .music-content-wrapper .slider-wrapper {
   justify-content: center;
   align-items: center;
   width: 90%;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   position: relative;
@@ -343,7 +340,6 @@ html body main #live {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-attachment: fixed;
 }
 html body main #live h2 {
   text-align: center;
@@ -373,7 +369,6 @@ html body main #live .live-wrapper.fade-in {
 html body main #live .live-wrapper .dates-wrapper {
   padding: 2em;
   margin-bottom: 5em;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -632,7 +627,6 @@ html body main .about-wrapper .bio-wrapper {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   padding: 10em 5em;
@@ -645,7 +639,6 @@ html body main .about-wrapper .bio-wrapper .bio-text {
   background: rgba(237, 224, 212, 0.7);
   border-radius: 2px;
   box-shadow: 0 0 6px gray;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   transform: translateY(50px);
@@ -683,7 +676,6 @@ html body main .photos div img {
   border-radius: 2px;
 }
 html body main .content-area {
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   display: flex;
@@ -722,7 +714,6 @@ html body main .content-area #content img {
 html body footer {
   background: rgb(230, 204, 178);
   font-weight: bold;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   padding: 1.8em;
@@ -871,19 +862,6 @@ html body footer .footer-wrapper .footer-menu span a:hover {
     transform: translateX(0);
     transition: transform 0.3s ease-in, opacity 0.3s ease-in;
   }
-  @-webkit-keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    75% {
-      opacity: 0.5;
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
   @keyframes fadeIn {
     0% {
       opacity: 0;
@@ -898,8 +876,7 @@ html body footer .footer-wrapper .footer-menu span a:hover {
     }
   }
   html header .header-wrapper nav.open .main-navigation {
-    -webkit-animation: fadeIn 0.8s ease-in-out forwards;
-            animation: fadeIn 0.8s ease-in-out forwards;
+    animation: fadeIn 0.8s ease-in-out forwards;
   }
   html header .sm-wrapper {
     margin-left: 4em;
@@ -1121,6 +1098,9 @@ html body footer .footer-wrapper .footer-menu span a:hover {
   html header .sm-wrapper a i {
     font-size: 1rem;
   }
+  html main .hero {
+    background-attachment: fixed;
+  }
   html main .new-ep .music-icons-wrapper {
     gap: 4em;
   }
@@ -1129,6 +1109,9 @@ html body footer .footer-wrapper .footer-menu span a:hover {
   }
   html main #music .music-content-wrapper {
     gap: 20em;
+  }
+  html main #live {
+    background-attachment: fixed;
   }
   html main #live a {
     font-size: 100%;
@@ -1139,6 +1122,7 @@ html body footer .footer-wrapper .footer-menu span a:hover {
   }
   html main .about-hero {
     background-position: initial;
+    background-attachment: fixed;
   }
   html main .bio-wrapper {
     align-items: flex-start;
