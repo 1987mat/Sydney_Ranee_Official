@@ -752,14 +752,26 @@ html body footer .footer-wrapper .footer-menu {
   margin-top: -1em;
 }
 html body footer .footer-wrapper .footer-menu span a {
-  text-decoration: none;
+  text-decoration-color: transparent;
   color: #555555;
-  transition: -webkit-text-decoration 0.2s ease;
-  transition: text-decoration 0.2s ease;
-  transition: text-decoration 0.2s ease, -webkit-text-decoration 0.2s ease;
+  transition: text-decoration-color 0.4s ease;
 }
 html body footer .footer-wrapper .footer-menu span a:hover {
-  text-decoration: underline;
+  text-decoration-color: #555555;
+}
+html body footer .footer-wrapper .email-link {
+  display: flex;
+  gap: 0.4em;
+  justify-content: center;
+  align-items: center;
+}
+html body footer .footer-wrapper .email-link a {
+  text-decoration-color: transparent;
+  color: #555555;
+  transition: text-decoration-color 0.4s ease;
+}
+html body footer .footer-wrapper .email-link a:hover {
+  text-decoration-color: #555555;
 }
 
 @media screen and (min-width: 320px) {

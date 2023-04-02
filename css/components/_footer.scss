@@ -42,13 +42,30 @@ footer {
 
       span {
         a {
-          text-decoration: none;
+          text-decoration-color: transparent;
           color: #555555;
-          transition: text-decoration 0.2s ease;
+          transition: text-decoration-color 0.4s ease;
 
           &:hover {
-            text-decoration: underline;
+            text-decoration-color: #555555;
           }
+        }
+      }
+    }
+
+    .email-link {
+      display: flex;
+      gap: 0.4em;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        text-decoration-color: transparent;
+        color: #555555;
+        transition: text-decoration-color 0.4s ease;
+
+        &:hover {
+          text-decoration-color: #555555;
         }
       }
     }

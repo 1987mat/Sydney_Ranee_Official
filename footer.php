@@ -17,6 +17,7 @@
           <span>|</span>
           <span><a href="<?php echo site_url('/privacy-policy');?>" target="_blank" aria-label="privacy-policy">Privacy Policy</a></span>
         </div>
+        <div class="email-link"><span class="dashicons dashicons-email"></span><a href="mailto:sydneyraneemusic@gmail.com" aria-label="email"> sydneyraneemusic@gmail.com</a></div>
       </div>
     </footer>
     <?php 
