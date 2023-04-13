@@ -141,6 +141,9 @@ class MusicSlider {
     this.sliderContainer = document.querySelector('.music-slider-container');
     this.buttons = document.querySelectorAll('[data-music-btn]');
     this.epArray = [{
+      title: 'For You',
+      link: 'https://open.spotify.com/album/0EUUIRgiTfbRHXkBPkjFkJ'
+    }, {
       title: 'Home',
       link: 'https://open.spotify.com/album/0w7iblRytKUfPA0TnrVzao'
     }, {

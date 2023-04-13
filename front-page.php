@@ -8,16 +8,17 @@
     </div>
     <!-- NEW EP -->
     <div class="new-ep">
-      <h2 data-observe>Wake Up & Get It</h2>
-      <h3 data-observe>OUT NOW</h3>
+      <h2 data-observe>For You</h2>
+      <h3 data-observe>OUT NOW!</h3>
       <div data-observe class="ep-container">
         <div class="music-icons-wrapper">
-          <a href="https://music.apple.com/us/album/wake-up-and-get-it-ep/1614484128?i=1614484129" target="_blank" aria-label="apple"><i class="fa fa-apple"></i></a>
-          <a href="https://www.amazon.com/music/player/albums/B09VMJG7SQ?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&trackAsin=B09VMGM2N6&ref=sr_1_20&s=dmusic&keywords=Sydney+Ranee%27&search-type=ss&qid=1666658464&sr=1-20" target="_blank" aria-label="amazon"><i class="fa fa-amazon"></i></a>
-          <a href="https://open.spotify.com/album/4VDEeEktiRUqtd3XDVaBqy" target="_blank" aria-label="spotify"><i class="fa fa-spotify"></i></a>
-          <a href="https://soundcloud.com/sydney-ranee/sets/wake-up-and-get-it" target="_blank" aria-label="soundcloud"><i class="fa fa-soundcloud"></i></a>
-          <a href="https://sydneyranee.bandcamp.com/album/wake-up-and-get-it" target="_blank" aria-label="bandcamp"><i class="fa fa-bandcamp"></i></a>
+          <a href="https://music.apple.com/us/album/for-you-single/1672663994" target="_blank" aria-label="apple"><i class="fa fa-apple"></i></a>
+          <a href="https://music.amazon.com/albums/B0BW4S54ZS?tag=fndcmpgns-20" target="_blank" aria-label="amazon"><i class="fa fa-amazon"></i></a>
+          <a href="https://open.spotify.com/album/0EUUIRgiTfbRHXkBPkjFkJ" target="_blank" aria-label="spotify"><i class="fa fa-spotify"></i></a>
+          <a href=" https://soundcloud.com/sydney-ranee/for-you" target="_blank" aria-label="soundcloud"><i class="fa fa-soundcloud"></i></a>
+          <a href="https://sydneyranee.bandcamp.com/track/for-you" target="_blank" aria-label="bandcamp"><i class="fa fa-bandcamp"></i></a>
         </div>
+       
       </div>
     </div>
   </section>
