@@ -11,10 +11,12 @@
     font-size: 3rem;
     color: #555555;
     transform: translateY(50px);
-    transition: transform 0.9s ease;
+    opacity: 0;
+    transition: transform 0.9s ease, opacity 0.9s ease;
 
-    &.fade-in {
+    &.slide-up {
       transform: translateY(0);
+      opacity: 1;
     }
   }
 

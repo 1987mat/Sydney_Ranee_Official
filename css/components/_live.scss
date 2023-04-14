@@ -11,10 +11,12 @@
     font-size: 3rem;
     color: $font-color;
     transform: translateY(50px);
-    transition: transform 0.9s ease;
+    opacity: 0;
+    transition: transform 0.9s ease, opacity 0.9s ease;
 
-    &.fade-in {
+    &.slide-up {
       transform: translateY(0);
+      opacity: 1;
     }
   }
 
@@ -26,10 +28,12 @@
     gap: 2em;
     margin: 4em;
     transform: translateY(50px);
-    transition: transform 0.9s ease;
+    opacity: 0;
+    transition: transform 0.9s ease, opacity 0.9s ease;
 
-    &.fade-in {
+    &.slide-up {
       transform: translateY(0);
+      opacity: 1;
     }
 
     .dates-wrapper {

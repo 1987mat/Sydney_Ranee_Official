@@ -13,10 +13,12 @@
     color: $font-color;
     text-shadow: $text-shadow;
     transform: translateY(20px);
-    transition: transform 0.9s ease;
+    opacity: 0;
+    transition: transform 0.9s ease, opacity 0.9s ease;
 
-    &.fade-in {
+    &.slide-up {
       transform: translateY(0);
+      opacity: 1;
     }
   }
 }
@@ -43,10 +45,12 @@
       box-shadow: 0 0 6px gray;
       height: fit-content;
       transform: translateY(50px);
-      transition: transform 0.9s ease;
+      opacity: 0;
+      transition: transform 0.9s ease, opacity 0.9s ease;
 
-      &.fade-in {
+      &.slide-up {
         transform: translateY(0);
+        opacity: 1;
       }
 
       p {
@@ -72,10 +76,12 @@
   div {
     width: 25em;
     transform: translateY(50px);
-    transition: transform 0.9s ease;
+    opacity: 0;
+    transition: transform 0.9s ease, opacity 0.9s ease;
 
-    &.fade-in {
+    &.slide-up {
       transform: translateY(0);
+      opacity: 1;
     }
 
     img {

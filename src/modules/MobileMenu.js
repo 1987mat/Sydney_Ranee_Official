@@ -25,6 +25,7 @@ class MobileMenu {
       ) {
         this.navMenu.classList.remove('open');
         this.hamburger.classList.remove('clicked');
+        document.documentElement.classList.remove('no-scroll');
       }
     });
   }

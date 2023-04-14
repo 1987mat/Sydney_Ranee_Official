@@ -116,6 +116,7 @@ class MobileMenu {
       if (this.hamburger.classList.contains('clicked') && e.target.tagName == 'A') {
         this.navMenu.classList.remove('open');
         this.hamburger.classList.remove('clicked');
+        document.documentElement.classList.remove('no-scroll');
       }
     });
   }
@@ -376,7 +377,7 @@ function animationOnScroll() {
   const elements = document.querySelectorAll('[data-observe]');
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      entry.target.classList.toggle('fade-in', entry.isIntersecting);
+      entry.target.classList.toggle('slide-up', entry.isIntersecting);
       if (entry.isIntersecting) observer.unobserve(entry.target);
     });
   }, {

@@ -114,14 +114,16 @@ html body main .hero .quote {
   margin-right: 1.5em;
   width: 35%;
   text-shadow: 0.5px 0.5px 0.5px #000000;
+  opacity: 0;
   transform: translateY(20px);
-  transition: transform 0.9s ease;
+  transition: transform 0.9s ease, opacity 0.9s ease;
 }
 html body main .hero .quote i {
   color: #ffffff;
 }
-html body main .hero .quote.fade-in {
+html body main .hero .quote.slide-up {
   transform: translateY(0);
+  opacity: 1;
 }
 html body main .new-ep {
   background-image: url("../images/5.jpg");
@@ -142,10 +144,12 @@ html body main .new-ep h2 {
   color: #ffffff;
   text-shadow: 1px 1px 2px #000000;
   transform: translateY(50px);
-  transition: transform 0.9s ease;
+  opacity: 0;
+  transition: transform 0.9s ease, opacity 0.9s ease;
 }
-html body main .new-ep h2.fade-in {
+html body main .new-ep h2.slide-up {
   transform: translateY(0);
+  opacity: 1;
 }
 html body main .new-ep h3 {
   text-align: center;
@@ -153,10 +157,12 @@ html body main .new-ep h3 {
   color: #ffffff;
   font-size: 2.5rem;
   transform: translateY(50px);
-  transition: transform 0.9s ease;
+  opacity: 0;
+  transition: transform 0.9s ease, opacity 0.9s ease;
 }
-html body main .new-ep h3.fade-in {
+html body main .new-ep h3.slide-up {
   transform: translateY(0);
+  opacity: 1;
 }
 html body main .new-ep .ep-container {
   display: flex;
@@ -164,7 +170,8 @@ html body main .new-ep .ep-container {
   align-items: center;
   margin-bottom: 20em;
   transform: translateY(50px);
-  transition: transform 0.9s ease;
+  opacity: 0;
+  transition: transform 0.9s ease, opacity 0.9s ease;
 }
 html body main .new-ep .ep-container .music-icons-wrapper {
   display: flex;
@@ -183,8 +190,9 @@ html body main .new-ep .ep-container .music-icons-wrapper i:hover {
   transform: scale(1.2);
   cursor: pointer;
 }
-html body main .new-ep .ep-container.fade-in {
+html body main .new-ep .ep-container.slide-up {
   transform: translateY(0);
+  opacity: 1;
 }
 html body main #music {
   background: rgb(230, 204, 178);
@@ -198,10 +206,12 @@ html body main #music h2 {
   margin-top: 3em;
   font-size: 3rem;
   transform: translateY(50px);
-  transition: transform 0.9s ease;
+  opacity: 0;
+  transition: transform 0.9s ease, opacity 0.9s ease;
 }
-html body main #music h2.fade-in {
+html body main #music h2.slide-up {
   transform: translateY(0);
+  opacity: 1;
 }
 html body main #music .music-content-wrapper {
   display: flex;
@@ -213,10 +223,12 @@ html body main #music .music-content-wrapper {
   height: fit-content;
   margin-bottom: 5em;
   transform: translateY(50px);
-  transition: transform 0.9s ease;
+  opacity: 0;
+  transition: transform 0.9s ease, opacity 0.9s ease;
 }
-html body main #music .music-content-wrapper.fade-in {
+html body main #music .music-content-wrapper.slide-up {
   transform: translateY(0);
+  opacity: 1;
 }
 html body main #music .music-content-wrapper .slider-wrapper {
   display: flex;
@@ -348,10 +360,12 @@ html body main #live h2 {
   font-size: 3rem;
   color: #ffffff;
   transform: translateY(50px);
-  transition: transform 0.9s ease;
+  opacity: 0;
+  transition: transform 0.9s ease, opacity 0.9s ease;
 }
-html body main #live h2.fade-in {
+html body main #live h2.slide-up {
   transform: translateY(0);
+  opacity: 1;
 }
 html body main #live .live-wrapper {
   display: flex;
@@ -361,10 +375,12 @@ html body main #live .live-wrapper {
   gap: 2em;
   margin: 4em;
   transform: translateY(50px);
-  transition: transform 0.9s ease;
+  opacity: 0;
+  transition: transform 0.9s ease, opacity 0.9s ease;
 }
-html body main #live .live-wrapper.fade-in {
+html body main #live .live-wrapper.slide-up {
   transform: translateY(0);
+  opacity: 1;
 }
 html body main #live .live-wrapper .dates-wrapper {
   padding: 2em;
@@ -391,10 +407,12 @@ html body main #videos h2 {
   font-size: 3rem;
   color: #555555;
   transform: translateY(50px);
-  transition: transform 0.9s ease;
+  opacity: 0;
+  transition: transform 0.9s ease, opacity 0.9s ease;
 }
-html body main #videos h2.fade-in {
+html body main #videos h2.slide-up {
   transform: translateY(0);
+  opacity: 1;
 }
 html body main #videos .video-modal {
   border-radius: 2px;
@@ -552,10 +570,12 @@ html body main #connect h2 {
   margin-top: 3em;
   font-size: 3rem;
   transform: translateY(50px);
-  transition: transform 0.9s ease;
+  opacity: 0;
+  transition: transform 0.9s ease, opacity 0.9s ease;
 }
-html body main #connect h2.fade-in {
+html body main #connect h2.slide-up {
   transform: translateY(0);
+  opacity: 1;
 }
 html body main #connect .wpforms-container form {
   background: rgba(237, 224, 212, 0.7);
@@ -613,10 +633,12 @@ html body main .about-hero h1 {
   color: #ffffff;
   text-shadow: 0.8px 0.8px 0.8px #282828;
   transform: translateY(20px);
-  transition: transform 0.9s ease;
+  opacity: 0;
+  transition: transform 0.9s ease, opacity 0.9s ease;
 }
-html body main .about-hero h1.fade-in {
+html body main .about-hero h1.slide-up {
   transform: translateY(0);
+  opacity: 1;
 }
 html body main .about-wrapper {
   display: flex;
@@ -642,10 +664,12 @@ html body main .about-wrapper .bio-wrapper .bio-text {
   height: -moz-fit-content;
   height: fit-content;
   transform: translateY(50px);
-  transition: transform 0.9s ease;
+  opacity: 0;
+  transition: transform 0.9s ease, opacity 0.9s ease;
 }
-html body main .about-wrapper .bio-wrapper .bio-text.fade-in {
+html body main .about-wrapper .bio-wrapper .bio-text.slide-up {
   transform: translateY(0);
+  opacity: 1;
 }
 html body main .about-wrapper .bio-wrapper .bio-text p {
   text-align: center;
@@ -665,10 +689,12 @@ html body main .photos {
 html body main .photos div {
   width: 25em;
   transform: translateY(50px);
-  transition: transform 0.9s ease;
+  opacity: 0;
+  transition: transform 0.9s ease, opacity 0.9s ease;
 }
-html body main .photos div.fade-in {
+html body main .photos div.slide-up {
   transform: translateY(0);
+  opacity: 1;
 }
 html body main .photos div img {
   width: 100%;

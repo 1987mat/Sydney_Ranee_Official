@@ -10,10 +10,12 @@
     margin-top: 3em;
     font-size: 3rem;
     transform: translateY(50px);
-    transition: transform 0.9s ease;
+    opacity: 0;
+    transition: transform 0.9s ease, opacity 0.9s ease;
 
-    &.fade-in {
+    &.slide-up {
       transform: translateY(0);
+      opacity: 1;
     }
   }
 
@@ -26,10 +28,12 @@
     height: fit-content;
     margin-bottom: 5em;
     transform: translateY(50px);
-    transition: transform 0.9s ease;
+    opacity: 0;
+    transition: transform 0.9s ease, opacity 0.9s ease;
 
-    &.fade-in {
+    &.slide-up {
       transform: translateY(0);
+      opacity: 1;
     }
 
     .slider-wrapper {
