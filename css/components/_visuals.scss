@@ -164,11 +164,12 @@
             position: absolute;
             font-size: 8rem;
             color: $secondary-color;
-            transition: color 0.5s ease-in-out;
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
 
             &:hover {
               cursor: pointer;
-              color: #3ec13e;
+              opacity: 0.9;
             }
           }
         }
