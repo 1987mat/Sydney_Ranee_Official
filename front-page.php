@@ -118,6 +118,7 @@
       <?php 
       // Get video preview images
         $video_preview_src1 = wp_get_attachment_image_url(115, 'large');
+        // $video_preview_src1 = get_template_directory_uri()."/images/2.jpg";
         $video_preview_src2 = wp_get_attachment_image_url(114, 'large');
         $video_preview_src3 = wp_get_attachment_image_url(116, 'large');
         $video_preview_src4 = wp_get_attachment_image_url(113, 'large');
