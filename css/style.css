@@ -384,6 +384,10 @@ html body main #live .live-wrapper.slide-up {
   transform: translateY(0);
   opacity: 1;
 }
+html body main #live .live-wrapper button {
+  background-color: #806543 !important;
+  color: whitesmoke !important;
+}
 html body main #live .live-wrapper .dates-wrapper {
   padding: 2em;
   margin-bottom: 5em;
