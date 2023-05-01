@@ -18,7 +18,6 @@ footer {
 
       i {
         color: $font-color;
-        color: #555555;
         font-size: 1rem;
         transition: transform 0.2s ease-in-out;
 
@@ -29,7 +28,7 @@ footer {
     }
 
     span {
-      color: #555555;
+      color: $font-color;
     }
 
     .footer-menu {
@@ -43,7 +42,7 @@ footer {
       span {
         a {
           text-decoration-color: transparent;
-          color: #555555;
+          color: $font-color;
           transition: text-decoration-color 0.4s ease;
 
           &:hover {
@@ -61,11 +60,11 @@ footer {
 
       a {
         text-decoration-color: transparent;
-        color: #555555;
+        color: $font-color;
         transition: text-decoration-color 0.4s ease;
 
         &:hover {
-          text-decoration-color: #555555;
+          text-decoration-color: $font-color;
         }
       }
     }

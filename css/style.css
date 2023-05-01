@@ -42,7 +42,7 @@ html body header {
   /* Scroll down hide */
 }
 html body header.fade {
-  background-color: rgba(230, 204, 178, 0.98);
+  background-color: #806543;
 }
 html body header.hide {
   top: -200px;
@@ -66,15 +66,16 @@ html body header .header-wrapper nav .main-navigation li {
 html body header .header-wrapper nav .main-navigation li a {
   text-decoration: none;
   transition: color 0.2s ease;
-  color: #ffffff;
+  color: lightgrey;
 }
 html body header .header-wrapper nav .main-navigation li a.active {
   text-decoration: underline;
   text-underline-offset: 15px;
   text-decoration-thickness: 3px;
+  color: white;
 }
 html body header .header-wrapper nav .main-navigation li a:hover {
-  color: lightgray;
+  color: white;
 }
 html body header .sm-wrapper {
   display: flex;
@@ -96,7 +97,7 @@ html body main {
   margin: 0;
   padding: 0;
   min-height: calc(100vh - 5em);
-  background-color: rgb(230, 204, 178);
+  background-color: #806543;
   /* PHOTOS */
 }
 html body main .hero {
@@ -119,7 +120,7 @@ html body main .hero .quote {
   transition: transform 0.9s ease, opacity 0.9s ease;
 }
 html body main .hero .quote i {
-  color: #ffffff;
+  color: lightgray;
 }
 html body main .hero .quote.slide-up {
   transform: translateY(0);
@@ -141,7 +142,7 @@ html body main .new-ep h2 {
   text-align: center;
   font-size: 5rem;
   font-family: "Noto Serif JP", serif;
-  color: #ffffff;
+  color: lightgray;
   text-shadow: 1px 1px 2px #000000;
   transform: translateY(50px);
   opacity: 0;
@@ -154,7 +155,7 @@ html body main .new-ep h2.slide-up {
 html body main .new-ep h3 {
   text-align: center;
   text-shadow: 1px 1px 2px #000000;
-  color: #ffffff;
+  color: lightgray;
   font-size: 2.5rem;
   transform: translateY(50px);
   opacity: 0;
@@ -182,7 +183,8 @@ html body main .new-ep .ep-container .music-icons-wrapper {
 }
 html body main .new-ep .ep-container .music-icons-wrapper i {
   font-size: 2rem;
-  color: #b2e6b2;
+  color: #542f34;
+  color: #e4c580;
   text-shadow: 0.8px 0.8px 0.8px #282828;
   transition: transform 0.2s ease-in-out;
 }
@@ -195,14 +197,14 @@ html body main .new-ep .ep-container.slide-up {
   opacity: 1;
 }
 html body main #music {
-  background: rgb(230, 204, 178);
+  background: #806543;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 html body main #music h2 {
-  color: #555555;
+  color: lightgray;
   margin-top: 3em;
   font-size: 3rem;
   transform: translateY(50px);
@@ -318,7 +320,7 @@ html body main #music .music-content-wrapper .ep-data h3 {
 }
 html body main #music .music-content-wrapper .ep-data .spotify-btn {
   display: flex;
-  background-color: #b2e6b2;
+  background-color: #542f34;
   justify-content: center;
   align-items: center;
   gap: 0.5em;
@@ -328,16 +330,17 @@ html body main #music .music-content-wrapper .ep-data .spotify-btn {
   border-radius: 50px;
   padding: 1em;
   width: 15em;
-  transition: background-color 0.4s ease-in-out;
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
 }
 html body main #music .music-content-wrapper .ep-data .spotify-btn .fa-spotify {
-  color: #282828;
+  color: lightgray;
 }
 html body main #music .music-content-wrapper .ep-data .spotify-btn span {
-  color: #282828;
+  color: lightgray;
 }
 html body main #music .music-content-wrapper .ep-data .spotify-btn:hover {
-  background-color: #3ec13e;
+  opacity: 0.8;
 }
 html body main #music .spotify-wrapper {
   width: 70vw;
@@ -358,7 +361,7 @@ html body main #live h2 {
   margin-bottom: 3em;
   margin-top: 3em;
   font-size: 3rem;
-  color: #ffffff;
+  color: lightgray;
   transform: translateY(50px);
   opacity: 0;
   transition: transform 0.9s ease, opacity 0.9s ease;
@@ -395,7 +398,7 @@ html body main #live .live-wrapper .dates-wrapper .bit-widget-container .bit-tra
   border-radius: 2px;
 }
 html body main #videos {
-  background: rgb(230, 204, 178);
+  background: #806543;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -405,7 +408,7 @@ html body main #videos {
 html body main #videos h2 {
   margin-top: 3em;
   font-size: 3rem;
-  color: #555555;
+  color: lightgray;
   transform: translateY(50px);
   opacity: 0;
   transition: transform 0.9s ease, opacity 0.9s ease;
@@ -539,7 +542,7 @@ html body main #videos .video-slider-wrapper .slider-container .video-slide .vid
 html body main #videos .video-slider-wrapper .slider-container .video-slide .video-slide-wrapper i {
   position: absolute;
   font-size: 8rem;
-  color: #b2e6b2;
+  color: #542f34;
   transition: color 0.5s ease-in-out;
 }
 html body main #videos .video-slider-wrapper .slider-container .video-slide .video-slide-wrapper i:hover {
@@ -616,7 +619,7 @@ html body main #connect .wpforms-container form .wpforms-submit-container button
   transition: background-color 0.4s ease;
 }
 html body main #connect .wpforms-container form .wpforms-submit-container button:hover {
-  background-color: #b2e6b2;
+  background-color: #542f34;
 }
 html body main .about-hero {
   background-image: url(../images/15.jpg);
@@ -630,7 +633,7 @@ html body main .about-hero {
 }
 html body main .about-hero h1 {
   font-size: 4rem;
-  color: #ffffff;
+  color: lightgray;
   text-shadow: 0.8px 0.8px 0.8px #282828;
   transform: translateY(20px);
   opacity: 0;
@@ -678,7 +681,7 @@ html body main .about-wrapper .bio-wrapper .bio-text p {
   padding: 1em;
 }
 html body main .photos {
-  background: rgb(230, 204, 178);
+  background: #806543;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -708,7 +711,7 @@ html body main .content-area {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgb(230, 204, 178);
+  background: #806543;
 }
 html body main .content-area #content {
   display: flex;
@@ -738,7 +741,7 @@ html body main .content-area #content img {
   width: 55%;
 }
 html body footer {
-  background: rgb(230, 204, 178);
+  background: #806543;
   font-weight: bold;
   height: -moz-fit-content;
   height: fit-content;
@@ -757,8 +760,7 @@ html body footer .footer-wrapper .sm-wrapper {
   gap: 2em;
 }
 html body footer .footer-wrapper .sm-wrapper i {
-  color: #ffffff;
-  color: #555555;
+  color: lightgray;
   font-size: 1rem;
   transition: transform 0.2s ease-in-out;
 }
@@ -767,7 +769,7 @@ html body footer .footer-wrapper .sm-wrapper i:hover {
   cursor: pointer;
 }
 html body footer .footer-wrapper span {
-  color: #555555;
+  color: lightgray;
 }
 html body footer .footer-wrapper .footer-menu {
   display: flex;
@@ -779,7 +781,7 @@ html body footer .footer-wrapper .footer-menu {
 }
 html body footer .footer-wrapper .footer-menu span a {
   text-decoration-color: transparent;
-  color: #555555;
+  color: lightgray;
   transition: text-decoration-color 0.4s ease;
 }
 html body footer .footer-wrapper .footer-menu span a:hover {
@@ -793,11 +795,11 @@ html body footer .footer-wrapper .email-link {
 }
 html body footer .footer-wrapper .email-link a {
   text-decoration-color: transparent;
-  color: #555555;
+  color: lightgray;
   transition: text-decoration-color 0.4s ease;
 }
 html body footer .footer-wrapper .email-link a:hover {
-  text-decoration-color: #555555;
+  text-decoration-color: lightgray;
 }
 
 @media screen and (min-width: 320px) {
@@ -870,7 +872,7 @@ html body footer .footer-wrapper .email-link a:hover {
     rotate: -45deg;
   }
   html header .header-wrapper nav {
-    background-color: rgb(230, 204, 178);
+    background-color: #806543;
     position: fixed;
     top: 0;
     left: 0;

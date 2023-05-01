@@ -6,7 +6,7 @@
   align-items: center;
 
   h2 {
-    color: #555555;
+    color: lightgray;
     margin-top: 3em;
     font-size: 3rem;
     transform: translateY(50px);
@@ -147,18 +147,19 @@
         border-radius: 50px;
         padding: 1em;
         width: 15em;
-        transition: background-color 0.4s ease-in-out;
+        opacity: 1;
+        transition: opacity 0.4s ease-in-out;
 
         .fa-spotify {
-          color: #282828;
+          color: lightgray;
         }
 
         span {
-          color: #282828;
+          color: lightgray;
         }
 
         &:hover {
-          background-color: #3ec13e;
+          opacity: 0.8;
         }
       }
     }

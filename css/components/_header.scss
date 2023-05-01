@@ -15,7 +15,8 @@ header {
 
   /* Scroll down fade in */
   &.fade {
-    background-color: rgba(230, 204, 178, 0.98);
+    // background-color: rgba(230, 204, 178, 0.98);
+    background-color: $primary-color;
   }
 
   /* Scroll down hide */
@@ -44,16 +45,17 @@ header {
           a {
             text-decoration: none;
             transition: color 0.2s ease;
-            color: $font-color;
+            color: lightgrey;
 
             &.active {
               text-decoration: underline;
               text-underline-offset: 15px;
               text-decoration-thickness: 3px;
+              color: white;
             }
 
             &:hover {
-              color: lightgray;
+              color: white;
             }
           }
         }
