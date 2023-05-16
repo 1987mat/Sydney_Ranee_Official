@@ -68,7 +68,7 @@ $biggerScreen2: 2559px;
 
         .contact-wrapper {
           form {
-            min-width: 80%;
+            width: 80vw;
           }
         }
       }
@@ -403,6 +403,14 @@ $biggerScreen2: 2559px;
         .video-slider-wrapper {
           margin-top: 4em;
           width: 60em;
+        }
+      }
+
+      #connect {
+        .contact-wrapper {
+          form {
+            width: 60vw;
+          }
         }
       }
 

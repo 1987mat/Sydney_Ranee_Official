@@ -568,6 +568,7 @@ html body main #connect {
   background-image: url("../images/connect-image.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -590,7 +591,6 @@ html body main #connect h2.slide-up {
 html body main #connect .wpforms-container form {
   background: rgba(237, 224, 212, 0.7);
   gap: 1.5em;
-  width: 60vw;
   border-radius: 2px;
   border: none;
   box-shadow: 0 0 5px gray;
@@ -959,7 +959,7 @@ html body footer .footer-wrapper .email-link a:hover {
     padding-bottom: 10em;
   }
   html main #connect .contact-wrapper form {
-    min-width: 80%;
+    width: 80vw;
   }
   html main .bio-wrapper {
     align-items: center;
@@ -1156,6 +1156,9 @@ html body footer .footer-wrapper .email-link a:hover {
   html main #videos .video-slider-wrapper {
     margin-top: 4em;
     width: 60em;
+  }
+  html main #connect .contact-wrapper form {
+    width: 60vw;
   }
   html main .about-hero {
     background-position: initial;

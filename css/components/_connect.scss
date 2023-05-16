@@ -2,6 +2,7 @@
   background-image: url('../images/connect-image.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,7 +28,6 @@
     form {
       background: rgba(237, 224, 212, 0.7);
       gap: 1.5em;
-      width: 60vw;
       border-radius: 2px;
       border: none;
       -moz-box-shadow: 0 0 5px gray;
