@@ -36,7 +36,7 @@ $biggerScreen2: 2559px;
         }
 
         .music-content-wrapper {
-          gap: 10em;
+          gap: 15em;
 
           .slider-wrapper {
             .music-slider-container {
@@ -184,10 +184,6 @@ $biggerScreen2: 2559px;
         h2 {
           margin-bottom: 6em;
         }
-
-        .music-content-wrapper {
-          gap: 12em;
-        }
       }
 
       #videos {
@@ -241,12 +237,6 @@ $biggerScreen2: 2559px;
     }
 
     main {
-      #music {
-        .music-content-wrapper {
-          gap: 12em;
-        }
-      }
-
       #videos {
         .video-slider-wrapper {
           margin-bottom: 4em;
@@ -303,14 +293,6 @@ $biggerScreen2: 2559px;
               }
             }
           }
-        }
-      }
-    }
-
-    main {
-      #music {
-        .music-content-wrapper {
-          gap: 14em;
         }
       }
     }
@@ -397,6 +379,15 @@ $biggerScreen2: 2559px;
 
         .music-content-wrapper {
           gap: 20em;
+          .slider-wrapper {
+            .music-slider-container {
+              .slide {
+                img {
+                  width: 60%;
+                }
+              }
+            }
+          }
         }
       }
 
