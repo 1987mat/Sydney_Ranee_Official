@@ -175,7 +175,7 @@
 
   <!-- CONTACT FORM -->
   <section id="connect">
-    <h2 data-observe>SUBSCRIBE</h2>
+    <h2 data-observe>CONNECT</h2>
     <div data-observe class="contact-wrapper">
       <?php echo the_content(); ?>
     </div> 
