@@ -120,7 +120,8 @@ html body main .hero .quote {
   transition: transform 0.9s ease, opacity 0.9s ease;
 }
 html body main .hero .quote i {
-  color: lightgray;
+  color: white;
+  line-height: 150%;
 }
 html body main .hero .quote.slide-up {
   transform: translateY(0);
@@ -219,7 +220,7 @@ html body main #music .music-content-wrapper {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 90vw;
+  width: 100vw;
   height: -moz-fit-content;
   height: fit-content;
   margin-bottom: 5em;
@@ -286,7 +287,7 @@ html body main #music .music-content-wrapper .music-slider-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50vw;
+  width: 70vw;
   position: relative;
 }
 html body main #music .music-content-wrapper .music-slider-container .slide {
@@ -311,6 +312,8 @@ html body main #music .music-content-wrapper .music-slider-container .slide[data
 html body main #music .music-content-wrapper .ep-data {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 html body main #music .music-content-wrapper .ep-data h3 {
   color: #282828;
@@ -389,7 +392,6 @@ html body main #live .live-wrapper button {
   color: whitesmoke !important;
 }
 html body main #live .live-wrapper .dates-wrapper {
-  padding: 2em;
   margin-bottom: 5em;
   width: -moz-fit-content;
   width: fit-content;
@@ -470,6 +472,7 @@ html body main #videos .video-slider-wrapper {
   height: 40em;
   transform: translateY(50px);
   transition: transform 0.9s ease;
+  margin-bottom: 4em;
 }
 html body main #videos .video-slider-wrapper.fade-in {
   transform: translateY(0);
@@ -528,8 +531,8 @@ html body main #videos .video-slider-wrapper .slider-container .video-slide {
   position: absolute;
   display: flex;
   align-items: center;
-  height: 75%;
-  width: 75%;
+  height: 85%;
+  width: 85%;
   transition: opacity 0.5s ease-in;
 }
 html body main #videos .video-slider-wrapper .slider-container .video-slide .video-slide-wrapper {

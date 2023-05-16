@@ -24,7 +24,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 90vw;
+    width: 100vw;
     height: fit-content;
     margin-bottom: 5em;
     transform: translateY(50px);
@@ -99,7 +99,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 50vw;
+      width: 70vw;
       position: relative;
 
       .slide {
@@ -128,6 +128,8 @@
     .ep-data {
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
       h3 {
         color: #282828;

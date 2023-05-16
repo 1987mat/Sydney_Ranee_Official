@@ -76,6 +76,7 @@
     height: 40em;
     transform: translateY(50px);
     transition: transform 0.9s ease;
+    margin-bottom: 4em;
 
     &.fade-in {
       transform: translateY(0);
@@ -145,8 +146,8 @@
         position: absolute;
         display: flex;
         align-items: center;
-        height: 75%;
-        width: 75%;
+        height: 85%;
+        width: 85%;
         transition: opacity 0.5s ease-in;
 
         .video-slide-wrapper {
