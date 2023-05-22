@@ -46,7 +46,7 @@ class VideoModal {
       button.addEventListener('click', () => {
         videoSrc = this.iframes[index];
         this.modal.querySelector('iframe').src = videoSrc.src;
-        setTimeout(() => this.modal.classList.add('open'), 150);
+        setTimeout(() => this.modal.classList.add('open'), 100);
         this.sliderButtons.forEach((btn) => {
           btn.classList.add('hide');
         });
