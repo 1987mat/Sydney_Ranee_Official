@@ -41,12 +41,13 @@ footer {
 
       span {
         a {
-          text-decoration-color: transparent;
+          text-decoration: none;
           color: $font-color;
-          transition: text-decoration-color 0.4s ease;
+          opacity: 0.8;
+          transition: opacity 0.4s ease;
 
           &:hover {
-            text-decoration-color: #555555;
+            opacity: 1;
           }
         }
       }
