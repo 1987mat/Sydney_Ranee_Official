@@ -257,8 +257,11 @@ class VideoModal {
       this.closeButton = this.modal.querySelector('.fa-times');
       this.sliderButtons = document.querySelectorAll('[data-carousel-btn]');
       this.iframes = [{
+        title: 'For You',
+        src: 'https://www.youtube.com/embed/Y4fDssZvGC0'
+      }, {
         title: 'Reconnect',
-        src: 'https://www.youtube.com/embed/aHqoLg3mi-o'
+        src: ' https://www.youtube.com/embed/Y4fDssZvGC0'
       }, {
         title: 'Wake Up and Get It',
         src: 'https://www.youtube.com/embed/lzKXf9yU3fk'

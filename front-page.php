@@ -125,6 +125,8 @@
         $video_preview_src5 = wp_get_attachment_image_url(119, 'large');
         $video_preview_src6 = wp_get_attachment_image_url(118, 'large');
         $video_preview_src7 = wp_get_attachment_image_url(117, 'large');
+        $video_preview_src7 = wp_get_attachment_image_url(117, 'large');
+
       ?>
       <div class="slider-container">
         <div class="video-slide" data-active>
