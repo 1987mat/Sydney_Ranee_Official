@@ -12,7 +12,7 @@ class VideoModal {
         },
         {
           title: 'Reconnect',
-          src: ' https://www.youtube.com/embed/Y4fDssZvGC0',
+          src: 'https://www.youtube.com/embed/aHqoLg3mi-o',
         },
         {
           title: 'Wake Up and Get It',

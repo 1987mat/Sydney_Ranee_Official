@@ -484,7 +484,7 @@ html body main #videos .video-slider-wrapper .prev {
   color: black;
   position: absolute;
   top: 45%;
-  left: -5px;
+  left: -1rem;
   border: none;
   background-color: transparent;
   transition: color 0.4s ease;
@@ -506,7 +506,7 @@ html body main #videos .video-slider-wrapper .next {
   color: black;
   position: absolute;
   top: 45%;
-  right: -5px;
+  right: -1rem;
   border: none;
   background-color: transparent;
   transition: color 0.4s ease;
@@ -1151,10 +1151,10 @@ html body footer .footer-wrapper .email-link a:hover {
     text-shadow: 1px 1px 1px #282828;
   }
   html header .sm-wrapper {
-    gap: 2em;
+    gap: 3em;
   }
   html header .sm-wrapper a i {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
   html main .hero {
     background-attachment: fixed;

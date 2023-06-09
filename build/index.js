@@ -261,7 +261,7 @@ class VideoModal {
         src: 'https://www.youtube.com/embed/Y4fDssZvGC0'
       }, {
         title: 'Reconnect',
-        src: ' https://www.youtube.com/embed/Y4fDssZvGC0'
+        src: 'https://www.youtube.com/embed/aHqoLg3mi-o'
       }, {
         title: 'Wake Up and Get It',
         src: 'https://www.youtube.com/embed/lzKXf9yU3fk'

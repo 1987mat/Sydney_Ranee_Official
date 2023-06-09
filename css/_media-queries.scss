@@ -93,6 +93,7 @@ $biggerScreen2: 2559px;
     footer {
       .footer-wrapper {
         padding: 1em;
+
         .sm-wrapper {
           a {
             i {
@@ -352,11 +353,11 @@ $biggerScreen2: 2559px;
       }
 
       .sm-wrapper {
-        gap: 2em;
+        gap: 3em;
 
         a {
           i {
-            font-size: 1rem;
+            font-size: 1.25rem;
           }
         }
       }
